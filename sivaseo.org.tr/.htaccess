@@ -1,0 +1,15 @@
+Options -MultiViews
+
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+
+    RewriteRule ^ index.html [QSA,L]
+
+    RewriteRule ^(.*)$ https://sivaseo.broozkan.com/$1 [R,L]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^broozkan\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^sivaseo\.broozkan\.com$
+RewriteRule ^/?$ "https\:\/\/broozkan\.com\/" [R=301,L]
+

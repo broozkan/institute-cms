@@ -1,0 +1,153 @@
+/* For Mobile */
+@media screen and (max-width: 540px) {
+
+  /* SPACING UTILITIES */
+  .mt-xs-4{
+    margin-top: 1.5rem!important;
+  }
+
+
+  /* card sentinel pharmacy */
+  .card-sentinel-pharmacy{
+    position: fixed;
+    max-width: 85px;
+    right: 2;
+    top: 500px;
+    z-index: 1;
+  
+  }
+  .card-sentinel-pharmacy .card-body{
+
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  /* card sentinel pharmacy */
+
+  #top-image{
+    width: 100%;
+  }
+
+  /* some pads and margins for mobile */
+  .mb-xs-2{
+    margin-bottom: 2rem!important;
+  }
+  .pr-xs-0{
+    padding-right: 0px!important;
+  }
+
+  .pl-xs-0{
+    padding-left: 0px!important;
+  }
+  .pr-xs-1{
+    padding-right: 1rem!important;
+  }
+
+  .pl-xs-1{
+    padding-left: 1rem!important;
+  }
+  /* some pads and margins for mobile */
+
+
+  .container{
+    width: 100%!important;
+  }
+
+  /* navbar */
+  .mobile-navbar{
+    position: absolute;
+    right: 0;
+    width: 0;
+  }
+  .navbar{
+    padding-top: 0.7rem!important;
+    padding-bottom: 0.5rem!important;
+  }
+  .navbar .navbar-toggler{
+    border: none;
+  }
+  .navbar .form-inline{
+    order: 1;
+    flex-flow: row;
+  }
+  
+  
+  .mega-dropdown-menu{
+    overflow-y: scroll;
+    height: 400px;
+    overflow-x: hidden;
+    width: 100%;
+    left: 0px;
+    position: absolute!important;
+    padding: 10px;
+  }
+  .mega-dropdown-menu .dropdown-item{
+    text-align: left;
+  }
+  .mega-dropdown-menu h6{
+    text-align: left;
+  }
+  /* navbar */
+
+
+  /* social media icons */
+  .social-media-icons-container-sidebar ul{
+    display: inline-flex;
+  }
+  .social-media-icons-container-sidebar .social-media-name{
+    text-align: center;
+  }
+  .social-media-icons-container li a{
+    font-size: 9px!important;
+  }
+  /* social media icons */
+
+
+  /* large photo */
+  .slider-area{
+    height: 500px;
+    margin-top: 135px;
+  }
+  .large-photo{
+    height: 450px;
+  }
+  /* large photo */
+
+
+
+  /* SLIDER */
+  .slider-overlay{
+    top: 610px;
+  }
+
+  /* BLOG */
+  .post-detail{
+    width: 100vw;
+    overflow: auto;
+  }
+  .title-inner h1{
+    font-size: 15px!important;
+  }
+  ul.paging-title{
+    display: none;
+  }
+  .page-title-area{
+    padding: 45px 0!important;
+  }
+  .list-inline{
+    display: inline-flex;
+    width: 75vw;
+    overflow: auto;  
+  }
+  .list-inline .category-link{
+    display: inline-flex;
+  }
+  .list-inline .category-link a{
+    font-size: 10px;
+    white-space: nowrap;
+  }
+
+
+
+}

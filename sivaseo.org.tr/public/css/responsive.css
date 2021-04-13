@@ -1,0 +1,372 @@
+/* --Additional Media Query-- */
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1310px;
+  }
+}
+
+@media (max-width:575px) {
+  .mt-xs-5{
+    margin-top: 3rem!important;
+  }
+  .header-middle-area {
+    position: static;
+  }
+  .header-space {
+    height: auto !important;
+  }
+  .logo {
+    padding: 24px 0 0;
+  }
+}
+
+/* Normal desktop :992px. */
+
+@media (min-width: 992px) and (max-width: 1169px) {
+  h5 {
+    font-size: 15px;
+  }
+  .main-menu>li>a {
+    padding: 30px 8px;
+  }
+  .sticky .main-menu>li>a {
+    padding: 20px 8px;
+  }
+  .search-box input {
+    width: 172px;
+  }
+  .socialbar {
+    margin-top: 0;
+  }
+  .slide-text h1 {
+    font-size: 40px;
+  }
+  .about-text a {
+    margin-top: 5px;
+  }
+  .homev-2 .text-content {
+    width: 94%;
+  }
+  .mobile-img {
+    margin-top: 80px;
+  }
+  .welcome-text a {
+    margin-top: 5px;
+  }
+  .box::before {
+    left: 31px;
+  }
+  .box::after {
+    right: 30px;
+  }
+}
+
+/* Tablet desktop :768px. */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  h5 {
+    font-size: 16px;
+  }
+  .header-space {
+    height: 130px;
+  }
+  .slide-text h1 {
+    font-size: 36px;
+  }
+  .about-content {
+    margin-bottom: 40px;
+  }
+  .social-icon li {
+    margin-right: 10px;
+  }
+  .box::before {
+    left: 16px;
+  }
+  .box::after {
+    right: 16px;
+  }
+  .p-table::before {
+    border-width: 48px 82px 0;
+    bottom: -48px;
+  }
+  .p-table {
+    width: 165px;
+  }
+  .copy-text {
+    font-size: 14px;
+  }
+  .homev-2 .text-content {
+    width: 91%;
+  }
+  .media {
+    margin-top: 30px;
+  }
+  .we-iamge {
+    margin-bottom: 40px;
+  }
+  .we-iamge, .we-text {
+    width: 100%;
+  }
+  .aboutbg2::before {
+    z-index: 0;
+  }
+  /* --Footer Related Stuff-- */
+  .instragram-box li {
+    margin-right: 20px;
+  }
+}
+
+/* small mobile :320px. */
+
+@media (max-width: 767px) {
+  h5 {
+    font-size: 16px;
+  }
+  .header-space {
+    height: 130px;
+  }
+  .header-top-left {
+    text-align: center;
+  }
+  .db-mobile {
+    padding-top: 10px;
+    display: block;
+  }
+  .header-top-right {
+    text-align: center !important;
+    padding-top: 15px;
+  }
+  .container {
+    width: 300px
+  }
+  .rmb-30 {
+    margin-bottom: 30px;
+  }
+  .rmt-70 {
+    margin-top: 70px;
+  }
+  .rmb-0 {
+    margin-bottom: 0px !important;
+  }
+  .rmt-0 {
+    margin-top: 0px !important;
+  }
+  .header-middle-area .container .row [class*="col-"] {
+    text-align: center;
+  }
+  .slide-text h1 {
+    font-size: 19px;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+  .slide-text p {
+    display: none;
+  }
+  .button-box {
+    margin-top: 25px;
+  }
+  .about-content {
+    margin-bottom: 40px;
+  }
+  .service-box {
+    margin-bottom: 40px;
+  }
+  .portfolio-menu li {
+    line-height: 25px;
+  }
+  .image-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .text-content {
+    width: 100%;
+    padding: 0;
+  }
+  .conuter-box {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .conuter-box:last-child {
+    margin: 0;
+  }
+  .box {
+    margin-bottom: 50px;
+  }
+  .col-sm-4:last-child .box {
+    margin-bottom: 0;
+  }
+  .dialog {
+    width: 268px;
+  }
+  .tesitmonial-carousel .slick-slide {
+    min-height: 380px;
+  }
+  .single-blog {
+    margin-bottom: 40px;
+  }
+  [class*="col-"]:last-child .single-blog {
+    margin-bottom: 0;
+  }
+  .col-md-4.col-sm-4:last-child .single-blog, .col-sm-3:last-child .single-skill, .col-lg-4.col-md-4.col-sm-6:last-child.footer-box {
+    margin-bottom: 0px;
+  }
+  .subscirbe-text form input {
+    width: 100%;
+  }
+  .footer-box {
+    margin-bottom: 40px;
+  }
+  .copy-text {
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .footer-social {
+    text-align: center !important;
+  }
+  .social-icon li {
+    margin-right: 19px;
+  }
+  .single-portfolio .image-box {
+    margin-bottom: 0;
+  }
+  .line-read {
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+  }
+  .conuter-box {
+    text-align: center;
+  }
+  .details .content i {
+    width: 10%;
+  }
+  .details .content p {
+    width: 90%;
+  }
+  .homev-2 .text-content {
+    width: 93%;
+  }
+  .slide-text h1 {
+    font-size: 12px;
+    line-height: 13px;
+  }
+  .button-box {
+    margin-top: 20px;
+  }
+  .button-box a {
+    font-size: 12px;
+    margin-top: 0;
+    padding: 5px 3px;
+  }
+  .nivo-controlNav {
+    bottom: -16px;
+  }
+  .mobile-img {
+    margin-bottom: 40px;
+  }
+  .tag>li {
+    line-height: 26px;
+    margin-right: 9px;
+  }
+  .tag-list {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .share-icone {
+    width: 100%;
+  }
+  .share-icone ul {
+    text-align: left
+  }
+  .leave-comment {
+    width: 100%;
+  }
+  .admin-text, .com-text {
+    overflow: hidden;
+  }
+  .we-iamge {
+    margin-bottom: 40px;
+  }
+  .we-iamge, .we-text {
+    width: 100%;
+  }
+  .aboutbg2 {
+    padding: 22px 13%;
+  }
+  .single-skill {
+    margin-bottom: 40px;
+  }
+  .box::before {
+    left: 42px;
+  }
+  .box::after {
+    right: 40px;
+  }
+  .p-table::before {
+    border-width: 48px 82px 0;
+    bottom: -48px;
+  }
+  .p-table {
+    width: 165px;
+  }
+  .aboutbg2::before {
+    z-index: 0;
+  }
+  .section-title h2 {
+    font-size: 22px;
+  }
+  .instragram-box li {
+    margin: 0 5px 5px 0;
+  }
+  /* --Contact Page Related Stuff-- */
+  .map_wrapper-2 {
+    margin: 40px 0 0;
+  }
+  /* --Service Page Related Stuff-- */
+  .middel-border p {
+    padding: 0;
+  }
+}
+
+/* Large Mobile :480px. */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .container {
+    width: 450px
+  }
+  .slide-text h1 {
+    font-size: 21px !important;
+  }
+  .button-box {
+    margin-top: 40px;
+  }
+  .button-box a {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+  .p-table {
+    margin-top: -35px;
+  }
+  .homev-2 .text-content {
+    width: 95%;
+  }
+  .dialog {
+    width: 410px;
+  }
+  .box::before {
+    left: 94px;
+  }
+  .box::after {
+    right: 93px;
+  }
+  .p-table::before {
+    border-width: 60px 105px 0;
+    bottom: -60px;
+  }
+  .p-table {
+    width: 210px;
+  }
+}

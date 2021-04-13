@@ -1,0 +1,105 @@
+/* -----------------------------------
+Template:  Ricpro
+
+NOTE: This is Footer style file. All footer related style included in this file.
+
+--------------------------------------*/
+.footer-contact-us li + li {
+  margin-top: 15px;
+}
+.footer-contact-us li i {
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  color: #444;
+  float: left;
+  font-size: 13px;
+  height: 27px;
+  line-height: 27px;
+  margin-right: 10px;
+  text-align: center;
+  transition: all 0.3s ease-out 0s;
+  width: 25px;
+}
+.footer-contact-us li i:hover{color:#c21a26;border: 1px solid #c21a26;cursor:pointer; }
+.instragram-box li {
+  float: left;
+  margin-bottom: 20px;
+  margin-right: 30px;
+}
+.footer-menu li a{padding-left: 15px;}
+.footer-menu li::before {
+  content: "\f111";
+  font: 5px/1 FontAwesome;
+  left: 3px;
+  opacity: 1;
+  position: absolute;
+  top: 20px;
+}
+.footer-contact-us span {
+  display: block;
+}
+.footer-menu li:first-child::before {
+  top: 6px;
+}
+.footer-menu li, .footer-contact-us > li {
+  color: #666;
+  font-size: 14px;
+  overflow: hidden;
+  position: relative;
+}
+.footer-menu li + li {
+  padding-top: 15px;
+}
+.footer-box h4 {
+  margin-bottom: 20px;
+}
+.copy-text {
+  color: #fff;
+  font-size: 15px;
+}
+.copy-text a {
+  color: inherit;
+}
+.copy-text a:hover {
+  color: #444;
+}
+.footer-social .social-icon li {
+  color: #fff;
+}
+.footer-social .social-icon li a {
+  color: #fff;
+  display: block;
+}
+
+#scrollUp {
+  border: 2px solid #c21a26;
+  border-radius: 50%;
+  bottom: 20px;
+  color: #fff;
+  height: 48px;
+  padding: 3px;
+  right: 20px;
+  text-align: center;
+  transition: all 0.2s ease-out 0s;
+  width: 48px;
+  text-decoration:none;
+}
+#scrollUp i {
+  background-color: #c21a26;
+  border-radius: 50%;
+  color: #fff;
+  display: block;
+  font-size: 22px;
+  height: 100%;
+  line-height: 34px;
+  position: relative;
+  width: 100%;
+}
+.homev-2 .footer-contact-us li i:hover {
+  border: 1px solid #00b4fb;
+  color: #00b4fb;
+  cursor: pointer;
+}
+.footer-social .social-icon li a:hover {
+  color: #ffffff;
+}

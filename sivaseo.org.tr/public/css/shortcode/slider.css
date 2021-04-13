@@ -1,0 +1,78 @@
+/* -----------------------------------
+Template:  Ricpro
+
+NOTE: This is Slider style file. All Slider related style included in this file.
+
+--------------------------------------*/
+.slider-area {
+  position: relative;
+  width: 100%;
+  float: left;
+}
+.nivo-caption {
+  background: rgba(0, 0, 0, 0.37) none repeat scroll 0 0;
+}
+.nivo-controlNav {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: 9;
+}
+.nivo-controlNav a {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 0;
+  cursor: pointer;
+  display: inline-block;
+  height: 6px;
+  margin: 5px;
+  text-indent: -9999px;
+  white-space: nowrap;
+  width: 20px;
+}
+.nivo-controlNav a.active {
+  background:  #c21a26;
+  height: 6px;
+
+}
+.slider-direction {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  color: #fff;
+  display: none;
+  font-size: 16px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+.slide-content {
+  padding: 0 50px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+.slide-text h1 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.slide-text p {
+  line-height: 30px;
+  padding: 0 20%;
+}
+/* Home version two */
+.homev-2 .slide-text {
+  padding-left: 10%;
+}
+.homev-2 .slide-text p {
+  padding: 0;
+}
+.homev-2 .nivo-caption {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+.homev-2 .btn-one2 {
+  border: 1px solid #ccc;
+  color: #666;
+}

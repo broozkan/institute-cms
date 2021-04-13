@@ -1,0 +1,180 @@
+/* -----------------------------------
+Template:  Theme Name
+
+NOTE: This is Header style file. All Header related style included in this file.
+
+    CSS INDEX
+    ===================
+    1. Header
+      1.1 Menu style
+		  1.2 Dropdown Style
+      1.3 Sticky Menu
+    2 Home version two
+
+
+--------------------------------------*/
+/* 1. Header */
+.logo {
+  padding: 24px 0;
+  transition: all 0.3s ease 0s;
+}
+/*1.1 Menu style */
+.header-area{
+	z-index: 10;
+	position: relative;
+}
+.main-menu > li > a {
+  color: #555;
+  display: block;
+  font-size: 16px;
+  padding: 30px 10px;
+  text-transform: uppercase;
+}
+.main-menu li {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown > li:hover > a,.header-top-right .social-icon li a:hover,.single-mega-item > li:hover > a,.main-menu > li:first-child a span,.main-menu > li:hover > a{
+	color: #c21a26;
+}
+/* Mega Dropdown Style */
+.mega-dropdown{
+  left: -160px!important;
+  width: 900px!important;
+  padding: 20px;
+}
+.mega-dropdown h6{
+  border-bottom: 1px solid #c21a26;
+  color: #c21a26;
+}
+/* Mega Dropdown Style */
+
+
+/*1.2 Dropdown Style*/
+.dropdown {
+  background: #ffffff none repeat scroll 0 0;
+  box-shadow: 0 1px 2px rgba(86, 86, 90, 0.5);
+  left: 0;
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  transform: scaleY(0);
+  transform-origin: 0 0 0;
+  transition: all 0.3s ease 0s;
+  visibility: hidden;
+  width: 200px;
+  z-index: 2;
+}
+.dropdown li {
+  border-bottom: 1px solid #efefef;
+  display: block;
+}
+.dropdown li a {
+  display: block;
+  padding: 9px 15px;
+}
+.main-menu li:hover .dropdown{
+	transform: scale(1);
+	visibility: visible;
+}
+.search-box {
+  overflow: hidden;
+  padding: 25px 0;
+  position: relative;
+}
+/*1.3 Sticky Menu*/
+ .sticky {
+  animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+  left: 0;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff none repeat scroll 0 0;
+  box-shadow: 0 1px 3px rgba(50, 50, 50, 0.4)
+}
+.sticky .main-menu > li > a {
+  padding: 20px 10px;
+}
+.sticky .logo {
+  padding: 14px 0;
+}
+.sticky .search-box {
+  padding: 15px 0;
+}
+/*2 Home version two /
+/* ----------------------------------------------------
+  Home version two css
+-------------------------------------------------------*/
+ul.my-setting {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0;
+  position: relative;
+  text-align: left;
+}
+ul.my-setting ul {
+  background: #fff none repeat scroll 0 0;
+  box-shadow: 0 1px 2px 1px #dadada;
+  list-style: outside none none;
+  margin: 0;
+  min-width: 114px;
+  padding: 15px;
+  position: absolute;
+  right: 0;
+  top: 35px;
+  transform: scaleY(0);
+  transform-origin: 0 0 0;
+  transition: all 0.3s ease 0s;
+  visibility: hidden;
+  z-index: 9999999;
+}
+.my-setting:hover ul {
+  transform: scale(1);
+  visibility: visible;
+}
+ul.my-setting ul li + li {
+  padding-top: 10px;
+}
+.lang-left > li > span > i {
+  margin-left: 5px;
+}
+.db-mobile > a {
+  color: #fff;
+}
+.header-top-right .social-icon li a {
+  color: #fff;
+  display: block;
+}
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: #fff;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+    box-shadow: 0 1px 3px rgba(50, 50, 50, 0.4)
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+.header-space{height: 80px;}
+.cd-headline.loading-bar .cd-words-wrapper::after {
+  background: #c21a26 none repeat scroll 0 0;
+  bottom: 0;
+  content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
+  transition: width 0.3s ease -0.1s;
+  width: 0;
+  z-index: 2;
+}
+.header-middle-area .main-menu{
+  display: flex;
+}
