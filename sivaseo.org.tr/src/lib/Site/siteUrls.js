@@ -1,5 +1,6 @@
 export const siteUrls = {
-    "USER_DASHBOARD_VIEW": "/kullanici-islemleri",
+    "HOME_VIEW": "/",
+    "USER_DASHBOARD_VIEW": "/kullanici-islemleri/anasayfa",
     "NEW_ANNOUNCEMENT_VIEW": "/ilan/yeni",
     "ANNOUNCEMENT_LIST_VIEW": "/ilanlar",
     "ANNOUNCEMENT_DETAIL_VIEW": "/ilanlar/detay",
@@ -8,6 +9,14 @@ export const siteUrls = {
     "CLOSE_EXPIRATION_LIST_VIEW": "/miadi-yakinlar",
     "UPDATE_CLOSE_EXPIRATION_VIEW": "/miadi-yakin/duzenle",
     "EDUCATION_VIDEO_PLAYLIST_LIST_VIEW": "/egitim-videolari",
-    "EDUCATION_VIDEO_PLAYLIST_DETAIL_VIEW": "/egitim-videolari/detay"
-
+    "EDUCATION_VIDEO_PLAYLIST_DETAIL_VIEW": "/egitim-videolari/detay",
+    "CATEGORY_DETAIL_VIEW": "/kategoriler/detay",
+    "SEARCH_RESULT_VIEW": "/arama/sonuclar",
+    "POST_DETAIL_VIEW": "/yazi/detay",
+    "REDIRECT_VIEW": "/yonlendirme",
+    "CONTACT_VIEW": "/sivas-eczacilar-odasi-iletisim",
+    "USER_FILE_LIST_VIEW": "/kullanici-islemleri/dosya-listesi",
+    "USER_PROFILE_VIEW": "/kullanici-islemleri/profil",
+    "USER_LOGIN_VIEW": "/kullanici-islemleri/giris",
+    "USER_LOGOUT_VIEW": "/kullanici-islemleri/cikis"
 }

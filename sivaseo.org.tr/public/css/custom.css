@@ -617,6 +617,7 @@ form .form-group {
   background: #fff;
 }
 
+
 .mega-dropdown-menu {
   /* width: 900px; */
   left: 0;
@@ -643,6 +644,66 @@ form .form-group {
 }
 
 /* navbar */
+
+/* search form */
+.form-search-container{
+  display: none;
+  background: white;
+  width: 100%;
+  transition: height 0.3s ease-in!important;
+  height: 0vh;
+  z-index: 999;
+  position: absolute;
+}
+.form-search-container.open{
+  background: white;
+  width: 100%;
+  transition: height 0.3s ease-in!important;
+  height: 100vh;
+  z-index: 1000;
+  top: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+}
+
+#form-search input{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 2.25rem;
+}
+#form-search input:active{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+#form-search .form-control:focus{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  box-shadow: none!important;
+}
+
+#form-search .btn{
+  border-radius: 0px;
+    font-size: 2.25rem;
+    padding: 5px;
+    line-height: 1;
+    background: white;
+    color: black;
+    border: none;
+}
+#form-search .btn:focus{
+    box-shadow: none;
+}
+.close-search{
+  position: absolute;
+  top: 30px;
+  right: 75px;
+}
+/* search form */
+
 
 /* square shortcuts */
 

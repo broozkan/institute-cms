@@ -11,8 +11,7 @@ import { propTypes } from 'react-bootstrap/esm/Image'
 import CommonSpinner from '../../../components/Site/Spinner/CommonSpinner'
 import CardPostMiddle from '../../../components/Site/Card/CardPostMiddle'
 
-const CategoryDetail = (props) => {
-	console.log("okofk");
+const SearchResultView = (props) => {
 
 	const [state, setState] = useState({
 		posts: [],
@@ -21,6 +20,7 @@ const CategoryDetail = (props) => {
 
 
 	useEffect(() => {
+		console.log(props);
 		getCategoryPosts()
 	}, [])
 
@@ -28,7 +28,7 @@ const CategoryDetail = (props) => {
 
 	const getCategoryPosts = async (page = 1) => {
 
-		const categoryPosts = await api.get('/posts/' + page, { params: { 'post_categories.category_name': props.match.params.categoryName }, headers: { 'auth-token': localStorage.getItem('auth-token') } })
+		const categoryPosts = await api.get('/posts/' + page, { params: { 'search': props.match.params.search }, headers: { 'auth-token': localStorage.getItem('auth-token') } })
 
 		setState({
 			...state,
@@ -60,7 +60,7 @@ const CategoryDetail = (props) => {
 
 	return (
 		<>
-			<PageTitle title={["Kategoriler", "Kategori Listesi"]} />
+			<PageTitle title={["Arama", "Arama Sonuçları"]} />
 			<section id="page-content" class="page-wrapper  clear">
 				<div class="section-area pb-70">
 					<div class="container">
@@ -77,7 +77,7 @@ const CategoryDetail = (props) => {
 							</div>
 							<div class="col-lg-9 col-md-8 order-1">
 								<div class="allblog-list row">
-
+									<p class="h2 large-title ml-3 mt-3">İlgili sonuçlar</p>
 									{categoryPostsHtml}
 
 								</div>
@@ -95,4 +95,4 @@ const CategoryDetail = (props) => {
 
 }
 
-export default CategoryDetail
+export default SearchResultView

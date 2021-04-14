@@ -30,6 +30,8 @@ import { SiteContext } from '../contexts/Site/SiteContext'
 import { SiteContextWrapper } from '../contexts/Site/SiteContext'
 import Footer from '../components/Site/Footer/Footer'
 import { siteUrls } from '../lib/Site/siteUrls'
+import FormSearch from '../components/Site/Form/FormSearch'
+import SearchResultView from '../views/Site/Search/SearchResultView'
 
 
 
@@ -41,18 +43,20 @@ const Routes = () => {
     return (
         <>
             <SiteContextWrapper>
+                <FormSearch />
+
                 <Router>
                     <Header />
                     <div id="page-content" className="page-wrapper">
                         <Switch>
-                            <Route path="/" exact component={HomePage}></Route>
-                            <Route path="/user/login" exact component={Login}></Route>
+                            <Route path={`${siteUrls.HOME_VIEW}`} exact component={HomePage}></Route>
+                            <Route path={`${siteUrls.USER_LOGIN_VIEW}`} exact component={Login}></Route>
 
-                            <Route path="/user/logout" exact component={Logout}></Route>
+                            <Route path={`${siteUrls.USER_LOGOUT_VIEW}`} exact component={Logout}></Route>
 
                             <Route path={siteUrls.USER_DASHBOARD_VIEW} exact component={Dashboard}></Route>
 
-                            <Route path="/user/profile" exact component={Profile}></Route>
+                            <Route path={siteUrls.USER_PROFILE_VIEW} exact component={Profile}></Route>
 
                             <Route path={siteUrls.CLOSE_EXPIRATION_LIST_VIEW} exact component={CloseExpirationMedicineList}></Route>
                             <Route path={siteUrls.NEW_CLOSE_EXPIRATION_VIEW} exact component={NewCloseExpirationMedicine}></Route>
@@ -66,14 +70,15 @@ const Routes = () => {
                             <Route path={siteUrls.EDUCATION_VIDEO_PLAYLIST_LIST_VIEW} exact component={EducateVideoPlaylistList}></Route>
                             <Route path={`${siteUrls.EDUCATION_VIDEO_PLAYLIST_DETAIL_VIEW}/:educationVideoPlaylistId`} exact component={EducateVideoPlaylistDetail}></Route>
 
-                            <Route path="/user/file/list/" exact component={FileList}></Route>
+                            <Route path={siteUrls.USER_FILE_LIST_VIEW} exact component={FileList}></Route>
 
-                            <Route path="/contact" exact component={ContactPage}></Route>
-                            <Route path="/redirect/" exact component={RedirectView}></Route>
+                            <Route path={`${siteUrls.CONTACT_VIEW}`} exact component={ContactPage}></Route>
+                            <Route path={`${siteUrls.REDIRECT_VIEW}`} exact component={RedirectView}></Route>
 
-                            <Route path="/post/detail/:postId" exact component={PostDetail}></Route>
+                            <Route path={`${siteUrls.POST_DETAIL_VIEW}/:postId`} exact component={PostDetail}></Route>
 
-                            <Route path="/category/detail/:categoryId/:categoryName" exact component={CategoryDetail}></Route>
+                            <Route path={`${siteUrls.CATEGORY_DETAIL_VIEW}/:categoryId/:categoryName`} exact component={CategoryDetail}></Route>
+                            <Route path={`${siteUrls.SEARCH_RESULT_VIEW}/:search`} exact component={SearchResultView}></Route>
                         </Switch>
                         <Footer />
 

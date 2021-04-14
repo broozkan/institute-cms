@@ -7,6 +7,7 @@ export const SiteContextWrapper = (props) => {
 
     const location = useLocation()
 
+    const [searchVisibility, setSearchVisibility] = useState(false)
     const [monthName, setMonthName] = useState('')
     const [dayName, setDayName] = useState('')
     const months = [
@@ -33,7 +34,6 @@ export const SiteContextWrapper = (props) => {
             return true
         } else {
             const splittedUrl = location.pathname.split('/')
-            console.log(splittedUrl);
             if (splittedUrl[1] == "user") {
                 if (splittedUrl[2] != "login") {
                     window.location.href = '/user/login'
@@ -57,12 +57,11 @@ export const SiteContextWrapper = (props) => {
         const currentDay = date.getDate()
         setMonthName(months[currentMonth])
         setDayName(currentDay)
-        console.log(months);
     }, [])
 
 
     return (
-        <SiteContext.Provider value={user, {monthName: monthName, dayName, dayName}}>
+        <SiteContext.Provider value={user, { monthName: monthName, dayName, dayName, searchVisibility, setSearchVisibility }}>
             {props.children}
         </SiteContext.Provider>
     )

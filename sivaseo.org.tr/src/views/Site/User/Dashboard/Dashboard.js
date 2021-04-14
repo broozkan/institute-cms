@@ -41,7 +41,7 @@ const Dashboard = () => {
                                 />
                                 <CardUserPanelQuery
                                     query={{
-                                        query_href: "/user/file/list",
+                                        query_href: siteUrls.USER_FILE_LIST_VIEW,
                                         query_name: "Belge-Döküman",
                                         query_icon_class: "fa fa-file"
                                     }}
@@ -55,7 +55,7 @@ const Dashboard = () => {
                                 />
                                 <CardUserPanelQuery
                                     query={{
-                                        query_href: "/user/profile",
+                                        query_href: siteUrls.USER_PROFILE_VIEW,
                                         query_name: "Profili Düzenle",
                                         query_icon_class: "fa fa-cogs"
                                     }}
