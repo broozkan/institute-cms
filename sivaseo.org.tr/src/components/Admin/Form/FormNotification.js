@@ -91,7 +91,12 @@ class FormNotification extends Component {
 
                 this.state.users.map((item, index) => {
                     if (e.target.dataset.id == item._id) {
-                        notificationUsers.push(item)
+                        notificationUsers.push(
+                            {
+                                user: item,
+                                is_user_read: false
+                            }
+                        )
 
                     }
                 })
@@ -170,6 +175,7 @@ class FormNotification extends Component {
 
 
     render() {
+
         /* users field */
         let usersHtml = ""
         if (this.state.is_users_loaded) {
@@ -177,7 +183,7 @@ class FormNotification extends Component {
 
                 let checked = false
                 this.state.notification_users.map((notificationUserItem) => {
-                    if (item._id == notificationUserItem._id) {
+                    if (item._id == notificationUserItem.user._id) {
                         checked = true
                     }
                 })

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 
 
 import { Link } from 'react-router-dom'
@@ -9,6 +9,9 @@ import CommonSpinner from '../Spinner/CommonSpinner'
 import NavItemUserProfile from '../NavItem/NavItemUserProfile'
 import NavItemLogin from '../NavItem/NavItemLogin'
 import NavItemSearch from '../NavItem/NavItemSearch'
+import FormSearch from '../Form/FormSearch'
+import { SiteContext } from '../../../contexts/Site/SiteContext'
+import { siteUrls } from '../../../lib/Site/siteUrls'
 
 const Header = () => {
 
@@ -16,6 +19,7 @@ const Header = () => {
         categories: [],
         is_categories_loaded: false
     })
+    const context = useContext(SiteContext)
 
 
 
@@ -39,11 +43,11 @@ const Header = () => {
     const getHref = (item) => {
         let href = ""
         if (item.category_type === "to_post") {
-            href = "/post/detail/" + item.category_post_id + "?t=" + item.category_name
+            href = `${siteUrls.POST_DETAIL_VIEW}/${item.category_post_id}?t=${item.category_name}`
         } else if (item.category_type === "external_link") {
-            href = "/redirect/?link=" + item.category_external_url
+            href = `${siteUrls.REDIRECT_VIEW}?link=+${item.category_external_url}`
         } else if (item.category_type === "category_list") {
-            href = "/category/detail/" + item._id + "/" + item.category_name
+            href = `${siteUrls.CATEGORY_DETAIL_VIEW}/${item._id}` + "/" + item.category_name
         }
 
         return href
@@ -179,19 +183,22 @@ const Header = () => {
                                         <div className="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
                                             <ul className="navbar-nav">
                                                 <li className="nav-item active">
-                                                    <a className=" -toggle nav-link nav-link" id="navbarDropdownMenuLink" href="/"><a  > ANASAYFA <span className="sr-only">(current)</span></a></a>
+                                                    <a className=" -toggle nav-link nav-link" id="navbarDropdownMenuLink" href={`${siteUrls.HOME_VIEW}`}><a  > ANASAYFA <span className="sr-only">(current)</span></a></a>
                                                     <div class="" aria-labelledby="navbarDropdownMenuLink"></div>
                                                 </li>
                                                 {categoriesHtml}
-                                                <NavItemSearch />
+                                                <li className="nav-item">
+                                                    <a className="nav-link" onClick={() => { context.setSearchVisibility(true) }} href="#"> <span className="fa fa-search"></span></a>
+                                                </li>
                                             </ul>
-
                                             <ul className="navbar-nav float-right">
                                                 {navbarLoginHtml}
                                             </ul>
                                         </div>
 
                                     </nav>
+
+
                                 </div>
                             </div>
                         </div>

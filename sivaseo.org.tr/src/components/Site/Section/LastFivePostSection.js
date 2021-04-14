@@ -18,8 +18,8 @@ const LastFivePost = () => {
 
 
     const getLastFivePost = async () => {
-       
-        const lastFivePost = await api.get('/posts/1', {params: {limit: 5}, headers: { 'auth-token': localStorage.getItem('auth-token') } })
+
+        const lastFivePost = await api.get('/posts/1', { params: { limit: 5 }, headers: { 'auth-token': localStorage.getItem('auth-token') } })
 
         setState({
             last_five_post: lastFivePost.data.docs,

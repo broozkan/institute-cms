@@ -19,7 +19,7 @@ const RandomCategories = () => {
 
 
     const getRandomCategories = async (page = 1) => {
-        const randomCategories = await api.get('/category/list/'+page, { headers: { 'auth-token': localStorage.getItem('auth-token') }, params: { limit: 5 } })
+        const randomCategories = await api.get('/categories/' + page, { headers: { 'auth-token': localStorage.getItem('auth-token') }, params: { limit: 5 } })
 
         setState({
             random_categories: randomCategories.data.docs,
@@ -27,10 +27,10 @@ const RandomCategories = () => {
         })
     }
 
-    
+
     let randomCategoriesHtml = ""
     console.log(state);
-     if (!state.is_random_categories_loaded) {
+    if (!state.is_random_categories_loaded) {
         randomCategoriesHtml = <CommonSpinner />
     } else {
         randomCategoriesHtml = state.random_categories.map((item) => {

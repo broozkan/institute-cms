@@ -1,11 +1,12 @@
 import React from 'react'
+import { siteUrls } from '../../../lib/Site/siteUrls';
 
 
 const CardPostSmall = (props) => {
 
-    const date = new Date(props.post.post_publish_date) 
+    const date = new Date(props.post.post_publish_date)
 
-    const postPublishDate = date.getDate() + "-"+ ("0" + (date.getMonth() + 1)).slice(-2) +"-"+date.getFullYear();
+    const postPublishDate = date.getDate() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" + date.getFullYear();
 
 
     return (
@@ -13,7 +14,7 @@ const CardPostSmall = (props) => {
             <div className="row">
                 <div className="col-lg-3 col-3 single-blog-image-container">
                     <div className="blog-img img-fluid">
-                        <a href={"/post/detail/" + props.post._id}>
+                        <a href={`${siteUrls.POST_DETAIL_VIEW}/${props.post._id}/?t=${props.post.post_title}`}>
                             <img src={process.env.REACT_APP_API_ENDPOINT + "/file/" + props.post.post_image} alt="" className="single-blog-img" />
                         </a>
                     </div>
@@ -24,7 +25,7 @@ const CardPostSmall = (props) => {
                             <div className="blog-content ">
 
                                 <div className="single-blog-post-title">
-                                    <a href={"/post/detail/" + props.post._id} alt={props.post.post_title}>
+                                    <a href={`${siteUrls.POST_DETAIL_VIEW}/${props.post._id}/?t=${props.post.post_title}`} alt={props.post.post_title}>
                                         {props.post.post_title}
                                     </a>
                                 </div>

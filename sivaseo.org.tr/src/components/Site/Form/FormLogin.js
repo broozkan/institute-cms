@@ -22,7 +22,7 @@ const FormLogin = () => {
     const handleOnSubmit = async (e) => {
         e.preventDefault()
         const formData = state
-        const loginResponse = await api.post('/user/login/', {}, { auth: { username: state.user_username, password: state.user_password } })
+        const loginResponse = await api.post('/users/login/', {}, { auth: { username: state.user_username, password: state.user_password } })
         console.log(loginResponse);
         if (loginResponse.data.response) {
             localStorage.setItem('dashboard-auth-token', loginResponse.data.token)
