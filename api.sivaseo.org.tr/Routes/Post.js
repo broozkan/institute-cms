@@ -14,41 +14,50 @@ const path = require('path')
 
 // get full posts
 router.get('/list/:page', async (req, res) => {
-    
+
     const page = req.query.page
     let recordLimit = 50
+    let pipeline = []
 
-    if(req.query.limit){
+    if (req.query.limit) {
         recordLimit = parseInt(req.query.limit)
         delete req.query.limit
     }
 
-    if(req.query.is_post_shown_on_slider == 'true'){
+    if (req.query.is_post_shown_on_slider == 'true') {
         req.query.is_post_shown_on_slider = true
-    }else{
+    } else {
         req.query.is_post_shown_on_slider = false
     }
-    
 
+    if (req.query.search) {
+        pipeline.push({
+            $match: {
+                "$post_title": req.query.search
+            }
+        })
+    }
+    console.log(pipeline);
+    console.log(req.query);
 
-    let aggregate = Post.aggregate();
+    let aggregate = Post.aggregate(pipeline);
     aggregate.match(req.query)
-    const options = { 
-        page : req.params.page, 
-        limit : recordLimit,
-        sort: { post_publish_date: "descending"}
+    const options = {
+        page: req.params.page,
+        limit: recordLimit,
+        sort: { post_publish_date: "descending" }
     }
 
-    Post.aggregatePaginate(aggregate,options, (err, result) => {
+    Post.aggregatePaginate(aggregate, options, (err, result) => {
         res.send(result)
     })
 
-    
+
 })
 
 // get specific post by id
 router.get('/get/:postId', async (req, res) => {
-    
+
     await Post.findOne({ _id: req.params.postId }, (err, postData) => {
         res.send(postData)
     })
@@ -62,10 +71,10 @@ router.post('/new', [verifyAuthentication, MultipartyMiddleware], async (req, re
 
     console.log(req.files);
     const tmp_path = req.files.file.path
-    const target_path =  './public/images/' + req.files.file.name
+    const target_path = './public/images/' + req.files.file.name
 
     fs.rename(tmp_path, target_path, (err) => {
-        if(err){
+        if (err) {
             res.send({
                 response: false,
                 responseData: err.message
@@ -74,7 +83,7 @@ router.post('/new', [verifyAuthentication, MultipartyMiddleware], async (req, re
         }
 
         fs.unlink(tmp_path, () => {
-            if(err){
+            if (err) {
                 res.send({
                     response: false,
                     responseData: err.message
@@ -100,7 +109,7 @@ router.post('/new', [verifyAuthentication, MultipartyMiddleware], async (req, re
         return false
     }
 
-    
+
     // new post
     const newPost = new Post({
         post_title: req.body.post_title,
@@ -138,10 +147,10 @@ router.put('/update/:postId', [verifyAuthentication, MultipartyMiddleware], asyn
 
 
     const tmp_path = req.files.file.path
-    const target_path =  './public/images/' + req.files.file.name
+    const target_path = './public/images/' + req.files.file.name
 
     fs.rename(tmp_path, target_path, (err) => {
-        if(err){
+        if (err) {
             res.send({
                 response: false,
                 responseData: err.message
@@ -150,7 +159,7 @@ router.put('/update/:postId', [verifyAuthentication, MultipartyMiddleware], asyn
         }
 
         fs.unlink(tmp_path, () => {
-            if(err){
+            if (err) {
                 res.send({
                     response: false,
                     responseData: err.message
@@ -191,26 +200,26 @@ router.put('/update/:postId', [verifyAuthentication, MultipartyMiddleware], asyn
             post_state: req.body.post_state
         }
 
-    ,(err, updatedPost) => {
-        if (err) {
-            res.send({
-                response: false,
-                responseData: err
-            })
-        } else {
-            res.send({
-                response: true,
-                responseData: updatedPost
-            })
-        }
-    })
+        , (err, updatedPost) => {
+            if (err) {
+                res.send({
+                    response: false,
+                    responseData: err
+                })
+            } else {
+                res.send({
+                    response: true,
+                    responseData: updatedPost
+                })
+            }
+        })
 
 })
 // update post
 
 
 // delete post
-router.delete('/delete/:postId',async (req, res) => {
+router.delete('/delete/:postId', async (req, res) => {
     await Post.deleteOne({ _id: req.params.postId }, (err) => {
         if (err) {
             res.send({

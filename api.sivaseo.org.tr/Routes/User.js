@@ -3,7 +3,7 @@ const router = express.Router()
 const User = require('../Models/User')
 const { userValidation } = require('../validation')
 const jwt = require('jsonwebtoken')
-const Pharmacy = require('../Models/Pharmacy')
+const Pharmacy = require('../Models/ModelPharmacy')
 const Controller = require('../Controllers/Controller')
 
 // get user list

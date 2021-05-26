@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-
+var aggregatePaginate = require("mongoose-aggregate-paginate-v2")
 
 const pharmacySchema = mongoose.Schema({
     pharmacy_name: {
@@ -24,5 +24,8 @@ const pharmacySchema = mongoose.Schema({
     }
 })
 
-module.exports.pharmacySchema = pharmacySchema
+pharmacySchema.plugin(aggregatePaginate);
+
+
 module.exports.pharmacyModel = mongoose.model('Pharmacy', pharmacySchema)
+module.exports.pharmacySchema = pharmacySchema

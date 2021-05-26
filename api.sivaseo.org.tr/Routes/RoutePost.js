@@ -14,8 +14,19 @@ const path = require('path');
 // get post list
 router.get('/:page', async (req, res) => {
 
+    let pipeline = []
+
     if (req.query) {
         req.query = Controller.deleteEmptyFilters(req.query)
+
+        pipeline = [
+            {
+                $match: req.query,
+            },
+            {
+                $sort: { post_order_number: 1 }
+            }
+        ]
 
         if (req.query._id) {
             req.query._id = mongoose.Types.ObjectId(req.query._id)
@@ -30,15 +41,21 @@ router.get('/:page', async (req, res) => {
             req.query["is_post_shown_on_slider"] = req.query["is_post_shown_on_slider"] == true
         }
 
-    }
-    const aggregate = PostModel.postModel.aggregate([
-        {
-            $match: req.query,
-        },
-        {
-            $sort: { post_order_number: 1 }
+        if (req.query.search) {
+            pipeline = [
+                {
+                    $match: {
+                        "$text": { "$search": req.query.search }
+                    }
+                },
+                {
+                    $sort: { post_order_number: 1 }
+                }
+            ]
         }
-    ])
+
+    }
+    const aggregate = PostModel.postModel.aggregate(pipeline)
 
     const options = {
         page: req.params.page,
@@ -46,6 +63,7 @@ router.get('/:page', async (req, res) => {
     }
 
     PostModel.postModel.aggregatePaginate(aggregate, options, (err, result) => {
+        console.log(err)
         res.send(result)
     })
 })

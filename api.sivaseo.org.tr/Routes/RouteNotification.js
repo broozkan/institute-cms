@@ -22,6 +22,10 @@ router.get('/:page', async (req, res) => {
             req.query["_id"] = mongoose.Types.ObjectId(req.query["_id"])
         }
 
+        if (req.query["notification_users.user._id"]) {
+            req.query["notification_users.user._id"] = mongoose.Types.ObjectId(req.query["notification_users.user._id"])
+        }
+
     }
 
     const aggregate = NotificationModel.notificationModel.aggregate([{

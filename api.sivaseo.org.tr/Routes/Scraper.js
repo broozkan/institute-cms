@@ -46,8 +46,8 @@ const getLastTebPost = async () => {
 
 router.get('/', async (req, res) => {
     const response = await getLastTebPost()
-    const tebCategoryId = await Category.CategoryModel.findOne({ category_name: "TEB DUYURULARI" }, (err, data) => {
-        return data
+    const tebCategory = await Category.categoryModel.findOne({ category_name: "TEB" }, (err, data) => {
+
     })
 
 
@@ -61,24 +61,17 @@ router.get('/', async (req, res) => {
     } else {
         // save the post
 
-        const newPost = new Post({
+        const newPost = new Post.postModel({
             post_title: response.post_title,
             post_alternative_title: response.post_title,
-            post_image: "teb_logo.png",
+            post_image: "teb_logo.jpg",
             post_content: response.post_content,
             is_post_shown_on_slider: false,
             is_post_open_for_comment: false,
             post_author: "TEB",
             post_keywords: "teb duyuruları",
             post_categories: [
-                {
-                    _id: tebCategoryId._id,
-                    category_name: tebCategoryId.category_name,
-                    is_category_main: false,
-                    category_type: "category_list",
-                    category_upper_category_id: "",
-                    is_category_checked: true
-                }
+                tebCategory
             ],
             post_state: "1"
         })

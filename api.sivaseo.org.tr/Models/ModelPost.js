@@ -51,6 +51,7 @@ const postSchema = mongoose.Schema({
 
 })
 
+postSchema.index({ post_content: 'text' })
 postSchema.plugin(aggregatePaginate);
 
 

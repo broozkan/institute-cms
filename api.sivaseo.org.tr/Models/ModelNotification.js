@@ -12,7 +12,16 @@ const notificationSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    notification_users: [User.userSchema],
+    notification_users: [
+        {
+            user: User.userSchema,
+            is_user_read: {
+                type: Boolean,
+                required: true,
+                default: false
+            }
+        }
+    ],
     notification_publish_date: {
         type: Date,
         default: Date.now

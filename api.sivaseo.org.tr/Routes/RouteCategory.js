@@ -39,13 +39,7 @@ router.get('/:page', async (req, res) => {
     }
     ])
 
-    console.log([{
-        $match: req.query
-    },
-    {
-        $sort: { _id: 1 }
-    }
-    ]);
+
 
     const options = {
         page: req.params.page,

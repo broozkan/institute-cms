@@ -4,7 +4,7 @@ const app = express();
 const homeRouter = require('./Routes/Home')
 const postRouter = require('./Routes/RoutePost')
 const userRouter = require('./Routes/User')
-const pharmacyRouter = require('./Routes/Pharmacy')
+const pharmacyRouter = require('./Routes/RoutePharmacy')
 const permissionRouter = require('./Routes/Permission')
 const categoryRouter = require('./Routes/RouteCategory')
 const fileRouter = require('./Routes/File')
@@ -13,7 +13,7 @@ const sliderRouter = require('./Routes/Slider')
 const commentRouter = require('./Routes/Comment')
 const feedbackRouter = require('./Routes/Feedback')
 const formRouter = require('./Routes/Form')
-const sentinelPharmacyRouter = require('./Routes/Sentinelpharmacy')
+const sentinelPharmacyRouter = require('./Routes/RouteSentinelPharmacy')
 const scraperRouter = require('./Routes/Scraper')
 const educationVideoPlaylistRouter = require('./Routes/RouteEducationVideoPlaylist')
 const closeExpirationRouter = require('./Routes/RouteCloseExpiration')
@@ -67,7 +67,7 @@ app.use(function (req, res, next) {
 app.use('/api_sivaseo/posts', postRouter);
 app.use('/api_sivaseo/users', userRouter);
 app.use('/api_sivaseo/permission', permissionRouter);
-app.use('/api_sivaseo/pharmacy', pharmacyRouter);
+app.use('/api_sivaseo/pharmacies', pharmacyRouter);
 app.use('/api_sivaseo/categories', categoryRouter);
 app.use('/api_sivaseo/file', fileRouter);
 app.use('/api_sivaseo/shortcut', shortcutRouter);
@@ -76,7 +76,7 @@ app.use('/api_sivaseo/comment', commentRouter);
 app.use('/api_sivaseo/feedback', feedbackRouter);
 app.use('/api_sivaseo/form', formRouter);
 app.use('/api_sivaseo/', homeRouter);
-app.use('/api_sivaseo/sentinelpharmacy', sentinelPharmacyRouter);
+app.use('/api_sivaseo/sentinelpharmacies', sentinelPharmacyRouter);
 app.use('/api_sivaseo/scraper', scraperRouter);
 app.use('/api_sivaseo/education-video-playlists', educationVideoPlaylistRouter);
 app.use('/api_sivaseo/close-expirations', closeExpirationRouter);
@@ -92,4 +92,4 @@ app.use('/api_sivaseo/pdf', pdfRouter);
 
 
 
-app.listen(process.env.PORT || 8080)
+app.listen(process.env.PORT || 8000)

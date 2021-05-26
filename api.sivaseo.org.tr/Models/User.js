@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const Permission = require('./Permission')
-const Pharmacy = require('./Pharmacy')
+const Pharmacy = require('./ModelPharmacy')
 var aggregatePaginate = require("mongoose-aggregate-paginate-v2")
 
 
@@ -21,7 +21,7 @@ const userSchema = mongoose.Schema({
         type: String,
         required: false
     },
-    user_pharmacy:[Pharmacy.pharmacySchema],
+    user_pharmacy: Pharmacy.pharmacySchema,
     user_redirect_url: {
         type: String,
         required: false,
