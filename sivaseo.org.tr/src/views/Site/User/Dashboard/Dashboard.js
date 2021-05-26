@@ -48,7 +48,7 @@ const Dashboard = () => {
                                 />
                                 <CardUserPanelQuery
                                     query={{
-                                        query_href: "/user/notification",
+                                        query_href: siteUrls.NOTIFICATION_LIST_VIEW,
                                         query_name: "Bildirimlerim",
                                         query_icon_class: "fa fa-bell"
                                     }}

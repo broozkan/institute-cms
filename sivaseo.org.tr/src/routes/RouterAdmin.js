@@ -25,6 +25,9 @@ import UpdateEducationVideoPlaylistView from '../views/Admin/EducationVideoPlayl
 import UpdateNotificationView from '../views/Admin/Notification/UpdateNotificationView';
 import NotificationListView from '../views/Admin/Notification/NotificationListView';
 import NewNotificationView from '../views/Admin/Notification/NewNotificationView';
+import UserListView from '../views/Admin/User/UserListView';
+import NewUserView from '../views/Admin/User/NewUserView';
+import UpdateUserView from '../views/Admin/User/UpdateUserView';
 
 const Routes = () => {
     const location = useLocation()
@@ -36,7 +39,7 @@ const Routes = () => {
                     <Route path="/admin/login" exact component={Login}></Route>
                     <UserContextWrapper>
                         <Route path="/admin/login" exact component={Login}></Route>
-                        <Route path="/admin/logout" exact component={Logout}></Route>
+                        <Route path={adminUrls.LOGOUT_VIEW} exact component={Logout}></Route>
 
 
                         <Route path={adminUrls.CATEGORY_LIST_VIEW} exact component={CategoryListView}></Route>
@@ -46,6 +49,10 @@ const Routes = () => {
                         <Route path={adminUrls.NOTIFICATION_LIST_VIEW} exact component={NotificationListView}></Route>
                         <Route path={adminUrls.NEW_NOTIFICATION_VIEW} exact component={NewNotificationView}></Route>
                         <Route path={`${adminUrls.UPDATE_NOTIFICATION_VIEW}/:notificationId`} exact component={UpdateNotificationView}></Route>
+
+                        <Route path={adminUrls.USER_LIST_VIEW} exact component={UserListView}></Route>
+                        <Route path={adminUrls.NEW_USER_VIEW} exact component={NewUserView}></Route>
+                        <Route path={`${adminUrls.UPDATE_USER_VIEW}/:userId`} exact component={UpdateUserView}></Route>
 
                         <Route path={adminUrls.EDUCATION_VIDEO_PLAYLIST_LIST_VIEW} exact component={EducationVideoPlaylistListView}></Route>
                         <Route path={adminUrls.NEW_EDUCATION_VIDEO_PLAYLIST_VIEW} exact component={NewEducationVideoPlaylistView}></Route>

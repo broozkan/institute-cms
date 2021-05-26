@@ -6,8 +6,7 @@ import axios from 'axios'
 import CommonSpinner from '../Spinner/CommonSpinner'
 import { SiteContext } from '../../../contexts/Site/SiteContext'
 import { useEffect } from 'react'
-
-
+import haversine from 'haversine';
 
 
 
@@ -15,16 +14,26 @@ const ModalSentinelPharmacies = () => {
 
     const [show, setShow] = useState(false)
     const [sentinelPharmacies, setSentinelPharmacies] = useState([])
+    const [currentLocation, setCurrentLocation] = useState({})
 
     const siteContext = useContext(SiteContext)
 
 
+    useEffect(() => {
+        console.log(navigator.geolocation.getCurrentPosition((pos) => {
+            setCurrentLocation({
+                latitude: pos.coords.latitude,
+                longitude: pos.coords.longitude
+            })
+        }));
+    }, [])
+
 
     const handleShow = () => {
-        axios.get(process.env.REACT_APP_API_ENDPOINT + '/sentinelpharmacy/list')
+        axios.get(process.env.REACT_APP_API_ENDPOINT + '/sentinelpharmacies/1')
             .then((res) => {
                 setShow(true)
-                setSentinelPharmacies(res.data)
+                setSentinelPharmacies(res.data.docs)
             })
     }
 
@@ -41,7 +50,19 @@ const ModalSentinelPharmacies = () => {
     if (sentinelPharmacies.length < 1) {
         sentinelPharmaciesHtml = <CommonSpinner />
     } else {
+
         sentinelPharmaciesHtml = sentinelPharmacies.map((item) => {
+
+            const start = currentLocation
+            const sentinelPharmacyLocation = item.sentinel_pharmacy_location.split(',')
+            const end = {
+                latitude: sentinelPharmacyLocation[0],
+                longitude: sentinelPharmacyLocation[1]
+            }
+
+            const distance = haversine(start, end, { unit: 'km' })
+            item.distance = distance
+
             return (
                 <div className="col-lg-12 ">
                     <PharmacyCard pharmacy_informations={item} />

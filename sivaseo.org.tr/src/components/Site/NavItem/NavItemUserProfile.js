@@ -21,7 +21,7 @@ const NavItemUserProfile = () => {
                 </div>
             </li>
             <li class="nav-item active user-profile-nav-item">
-                <a href={siteUrls.USER_LOGIN_VIEW} className="nav-link" id="navbarDropdownMenuLink">
+                <a href={siteUrls.USER_DASHBOARD_VIEW} className="nav-link" id="navbarDropdownMenuLink">
                     <span className="fa fa-bell"></span>
                     <BadgeNotificationCount />
                 </a>

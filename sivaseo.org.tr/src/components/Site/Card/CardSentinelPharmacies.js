@@ -5,7 +5,7 @@ import { SiteContext } from '../../../contexts/Site/SiteContext'
 const CardSentinelPharmacies = (props) => {
 
     const siteContext = useContext(SiteContext)
-    
+
 
 
     return (

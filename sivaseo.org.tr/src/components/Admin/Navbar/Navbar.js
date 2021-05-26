@@ -1,7 +1,11 @@
 import React from 'react'
+import { adminUrls } from '../../../lib/Admin/adminUrls'
 
 
 const Navbar = () => {
+
+    const user = JSON.parse(localStorage.getItem('user'))
+
     return (
         <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
 
@@ -13,12 +17,12 @@ const Navbar = () => {
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Ecz. Buğra Karaman
-              </a>
+                            Ecz. {user.user_name}
+                        </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Profilim</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Çıkış Yap</a>
+                            <a class="dropdown-item" href={adminUrls.LOGOUT_VIEW}>Çıkış Yap</a>
                         </div>
                     </li>
                 </ul>

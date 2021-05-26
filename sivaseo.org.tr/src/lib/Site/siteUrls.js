@@ -18,5 +18,7 @@ export const siteUrls = {
     "USER_FILE_LIST_VIEW": "/kullanici-islemleri/dosya-listesi",
     "USER_PROFILE_VIEW": "/kullanici-islemleri/profil",
     "USER_LOGIN_VIEW": "/kullanici-islemleri/giris",
-    "USER_LOGOUT_VIEW": "/kullanici-islemleri/cikis"
+    "USER_LOGOUT_VIEW": "/kullanici-islemleri/cikis",
+    "NOTIFICATION_LIST_VIEW": '/kullanici-islemleri/bildirimlerim',
+    "NOTIFICATION_DETAIL_VIEW": '/kullanici-islemleri/bildirimlerim/detay'
 }

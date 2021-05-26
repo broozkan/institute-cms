@@ -32,6 +32,8 @@ import Footer from '../components/Site/Footer/Footer'
 import { siteUrls } from '../lib/Site/siteUrls'
 import FormSearch from '../components/Site/Form/FormSearch'
 import SearchResultView from '../views/Site/Search/SearchResultView'
+import NotificationList from '../views/Site/User/Notification/NotificationList'
+import NotificationDetail from '../views/Site/User/Notification/NotificationDetail'
 
 
 
@@ -57,6 +59,9 @@ const Routes = () => {
                             <Route path={siteUrls.USER_DASHBOARD_VIEW} exact component={Dashboard}></Route>
 
                             <Route path={siteUrls.USER_PROFILE_VIEW} exact component={Profile}></Route>
+
+                            <Route path={siteUrls.NOTIFICATION_LIST_VIEW} exact component={NotificationList}></Route>
+                            <Route path={`${siteUrls.NOTIFICATION_DETAIL_VIEW}/:notificationId`} exact component={NotificationDetail}></Route>
 
                             <Route path={siteUrls.CLOSE_EXPIRATION_LIST_VIEW} exact component={CloseExpirationMedicineList}></Route>
                             <Route path={siteUrls.NEW_CLOSE_EXPIRATION_VIEW} exact component={NewCloseExpirationMedicine}></Route>
