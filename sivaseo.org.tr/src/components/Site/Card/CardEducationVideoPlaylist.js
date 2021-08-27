@@ -7,7 +7,7 @@ const CardEducationVideoPlaylist = (props) => {
     return (
         <div class="single-box img-full mb-30 fix youtube-playlist-card">
             <div class="image-box custom-col-5">
-                <img src={logo} alt="" />
+                <img src={process.env.REACT_APP_API_ENDPOINT + "/file/egitim.jpg"} alt="" />
                 <a href="#"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
             </div>
             <div class="text-content custom-col-5 pl-15 my-2">

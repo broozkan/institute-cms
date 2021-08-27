@@ -1,0 +1,269 @@
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module '../validation'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sarikury/api_sivaseo/Routes/User.js:4:28)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sarikury/api_sivaseo/index.js:6:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module '../validation'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sarikury/api_sivaseo/Routes/User.js:4:28)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sarikury/api_sivaseo/index.js:6:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='utf-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module '../validation'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sarikury/api_sivaseo/Routes/User.js:4:28)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sarikury/api_sivaseo/index.js:6:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module '../validation'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sarikury/api_sivaseo/Routes/User.js:4:28)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sarikury/api_sivaseo/index.js:6:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+/home/sarikury/nodevenv/api_sivaseo/10/lib/node_modules/multer/index.js:1
+import bytes from 'bytes'
+       ^^^^^
+
+SyntaxError: Unexpected identifier
+    at Module._compile (internal/modules/cjs/loader.js:723:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sarikury/api_sivaseo/Routes/Shortcut.js:8:16)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sarikury/api_sivaseo/index.js:11:24)
+/home/sarikury/nodevenv/api_sivaseo/10/lib/node_modules/multer/index.js:1
+import bytes from 'bytes'
+       ^^^^^
+
+SyntaxError: Unexpected identifier
+    at Module._compile (internal/modules/cjs/loader.js:723:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sarikury/api_sivaseo/Routes/Shortcut.js:8:16)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sarikury/api_sivaseo/index.js:11:24)
+/home/sarikury/nodevenv/api_sivaseo/10/lib/node_modules/multer/index.js:1
+import bytes from 'bytes'
+       ^^^^^
+
+SyntaxError: Unexpected identifier
+    at Module._compile (internal/modules/cjs/loader.js:723:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sarikury/api_sivaseo/Routes/Shortcut.js:8:16)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sarikury/api_sivaseo/index.js:11:24)
+/home/sarikury/api_sivaseo/Routes/Shortcut.js:8
+const upload = multer()
+               ^
+
+ReferenceError: multer is not defined
+    at Object.<anonymous> (/home/sarikury/api_sivaseo/Routes/Shortcut.js:8:16)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sarikury/api_sivaseo/index.js:11:24)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+/home/sarikury/api_sivaseo/Routes/Shortcut.js:8
+const upload = multer()
+               ^
+
+ReferenceError: multer is not defined
+    at Object.<anonymous> (/home/sarikury/api_sivaseo/Routes/Shortcut.js:8:16)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sarikury/api_sivaseo/index.js:11:24)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+(node:30927) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:820) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:1102) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/[object Object]'
+(node:10034) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'children' of undefined
+    at getLastTebPost (/home/sarikury/api_sivaseo/Routes/Scraper.js:30:46)
+(node:10034) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:10034) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:10034) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/[object Object]'
+(node:10380) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'children' of undefined
+    at getLastTebPost (/home/sarikury/api_sivaseo/Routes/Scraper.js:30:46)
+(node:10380) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:10380) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:10380) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/undefined'
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/[object Object]'
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/undefined'
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/[object Object]'
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/undefined'
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/[object Object]'
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/undefined'
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/[object Object]'
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/[object Object]'
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='utf-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+(node:8157) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/[object Object]'
+(node:13432) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:14267) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/[object Object]'
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/[object Object]'
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/[object Object]'
+(node:14267) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'children' of undefined
+    at getLastTebPost (/home/sarikury/api_sivaseo/Routes/Scraper.js:30:46)
+(node:14267) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:14267) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/[object Object]'
+(node:14267) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'children' of undefined
+    at getLastTebPost (/home/sarikury/api_sivaseo/Routes/Scraper.js:30:46)
+(node:14267) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+(node:10961) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'children' of undefined
+    at getLastTebPost (/home/sarikury/api_sivaseo/Routes/Scraper.js:30:46)
+(node:10961) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:10961) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:10961) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:10961) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'children' of undefined
+    at getLastTebPost (/home/sarikury/api_sivaseo/Routes/Scraper.js:30:46)
+(node:10961) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/[object Object]'
+(node:17885) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:17899) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:17899) UnhandledPromiseRejectionWarning: ReferenceError: responseData is not defined
+    at router.get (/home/sarikury/api_sivaseo/Routes/Scraper.js:64:27)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:17899) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:17899) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:17885) UnhandledPromiseRejectionWarning: ReferenceError: responseData is not defined
+    at router.get (/home/sarikury/api_sivaseo/Routes/Scraper.js:64:27)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:17885) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:17885) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:17885) UnhandledPromiseRejectionWarning: ReferenceError: responseData is not defined
+    at router.get (/home/sarikury/api_sivaseo/Routes/Scraper.js:64:27)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:17885) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/[object Object]'
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/[object Object]'
+(node:17885) UnhandledPromiseRejectionWarning: ReferenceError: responseData is not defined
+    at router.get (/home/sarikury/api_sivaseo/Routes/Scraper.js:64:27)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:17885) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+(node:17885) UnhandledPromiseRejectionWarning: ReferenceError: responseData is not defined
+    at router.get (/home/sarikury/api_sivaseo/Routes/Scraper.js:64:27)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:17885) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+Error: ENOENT: no such file or directory, stat '/home/sarikury/api_sivaseo/public/images/[object Object]'
+(node:15361) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.

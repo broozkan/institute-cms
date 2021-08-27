@@ -54,7 +54,6 @@ const TableUser = () => {
                 <tr>
                     <td>{item.user_name}</td>
                     <td>
-                        <a href={`${adminUrls.UPDATE_USER_VIEW}/${item._id}`}> <span className="fa fa-edit"></span> Düzenle</a>
                         <ButtonDelete model_name="users" _id={item._id} />
                     </td>
                 </tr>

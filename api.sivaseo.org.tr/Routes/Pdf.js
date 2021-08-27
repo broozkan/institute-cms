@@ -6,8 +6,9 @@ const PDFDocument = require("pdfkit")
 const fs = require("fs")
 const path = require('path');
 const fontPath = (__dirname + '/../public/fonts/Roboto-Black.ttf');
+const stampImage = (__dirname + '/../public/images/muhur.jpg')
 const imagePath = (__dirname + '/../public/images/pdf-header.jpg');
-const verifyAuthentication = require('./verifyToken')
+const Controller = require('../Controllers/Controller')
 
 
 const getDate = () => {
@@ -26,7 +27,7 @@ const generateHeader = (doc, user) => {
 }
 
 const generateContent = (doc, user) => {
-  const randomNumber = Math.random(2000, 99999999)
+  const randomNumber = Math.floor(Math.random() * 100000)
 
   const date = getDate()
 
@@ -61,7 +62,7 @@ const generateSecondContent = (doc, user) => {
     .fillColor("#000000")
     .fontSize(10)
     .font(fontPath)
-    .text("         19550527172 T.C. kimlik no'lu Ecz. " + user.user_name + " " + date + " tarihinde 37580515 sicil numarasıyla Odamıza kayıt olmuştur. " + user.user_pharmacy[0].pharmacy_province + " ili " + user.user_pharmacy[0].pharmacy_district + " ilçesi " + user.user_pharmacy[0].pharmacy_address + " faaliyet gösteren " + user.user_pharmacy[0].pharmacy_name + " Eczanesinin sahibi ve mesul müdürüdür. İşbu belge ilgilinin kendi isteği üzerine Oda kayıtlarına uygun olarak verilmiştir.", { align: 'left' })
+    .text("         19550527172 T.C. kimlik no'lu Ecz. " + user.user_name + " " + date + " tarihinde 37580515 sicil numarasıyla Odamıza kayıt olmuştur. " + user.user_pharmacy.pharmacy_province + " ili " + user.user_pharmacy.pharmacy_district + " ilçesi " + user.user_pharmacy.pharmacy_address + " faaliyet gösteren " + user.user_pharmacy.pharmacy_name + " Eczanesinin sahibi ve mesul müdürüdür. İşbu belge ilgilinin kendi isteği üzerine Oda kayıtlarına uygun olarak verilmiştir.", { align: 'left' })
     .moveDown()
     .text("         Bilgilerinize sunulur.")
     .moveDown()
@@ -71,7 +72,10 @@ const generateSecondContent = (doc, user) => {
     .moveDown()
     .text("Sivas Eczacı Odası", { align: "right" })
     .moveDown()
-    .text("Genel Sekreter", { align: "right" })
+    .moveDown()
+    .moveDown()
+    .moveDown()
+    .image(stampImage, 450, 500, { width: 100, height: 100 })
 
 }
 
@@ -89,11 +93,10 @@ const generateFooter = (doc, user) => {
 }
 
 // generate pdf by id
-router.get('/generate/:fileId', verifyAuthentication, async (req, res) => {
+router.get('/generate/:fileId', Controller.verifySiteToken, async (req, res) => {
 
 
-  const user = req.user.userData[0]
-  console.log(user);
+  const user = req.user
 
   switch (req.params.fileId) {
     case '0':

@@ -4,6 +4,7 @@ const PharmacyModel = require('../Models/ModelPharmacy')
 class Pharmacy {
     constructor(
         pharmacy_name,
+        pharmacy_gln_number,
         pharmacy_address,
         pharmacy_province,
         pharmacy_district,
@@ -11,6 +12,7 @@ class Pharmacy {
     ) {
         this.pharmacy_id = ''
         this.pharmacy_name = pharmacy_name
+        this.pharmacy_gln_number = pharmacy_gln_number
         this.pharmacy_address = pharmacy_address
         this.pharmacy_province = pharmacy_province
         this.pharmacy_district = pharmacy_district
@@ -37,7 +39,7 @@ class Pharmacy {
                 cb({
                     response: true,
                     responseData: savedPharmacy,
-                    status: 400
+                    status: 201
                 })
             }
         })

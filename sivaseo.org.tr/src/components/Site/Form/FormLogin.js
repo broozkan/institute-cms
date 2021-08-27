@@ -1,15 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Swal from 'sweetalert2'
 import { adminUrls } from '../../../lib/Admin/adminUrls'
 import { siteUrls } from '../../../lib/Site/siteUrls'
 import api from '../../../services/api'
 
-const FormLogin = () => {
+const FormLogin = (props) => {
 
     const [state, setState] = useState({
         user_username: '',
         user_password: ''
     })
+
+    useEffect(() => {
+        if (props.re) {
+            if (localStorage.getItem('user')) {
+                window.location.href = props.re
+            }
+        }
+    }, [])
 
     const handleOnChange = (e) => {
         setState({
@@ -25,7 +33,7 @@ const FormLogin = () => {
         const loginResponse = await api.post('/users/login/', {}, { auth: { username: state.user_username, password: state.user_password } })
         console.log(loginResponse);
         if (loginResponse.data.response) {
-            localStorage.setItem('dashboard-auth-token', loginResponse.data.token)
+            localStorage.setItem('auth-token', loginResponse.data.token)
             console.log(loginResponse.data.responseData[0]);
             localStorage.setItem('user', JSON.stringify(loginResponse.data.responseData[0]))
             console.log(JSON.parse(localStorage.getItem('user')));
@@ -34,7 +42,12 @@ const FormLogin = () => {
                 text: "Yönlendiriliyorsunuz...",
                 icon: 'success'
             })
-            window.location.href = siteUrls.USER_DASHBOARD_VIEW
+            if (props.re) {
+                window.location.href = props.re
+
+            } else {
+                window.location.href = siteUrls.USER_DASHBOARD_VIEW
+            }
         } else {
             Swal.fire({
                 title: 'Hata!',

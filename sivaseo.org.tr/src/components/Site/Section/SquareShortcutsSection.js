@@ -47,7 +47,7 @@ const SquareShortcuts = () => {
             <div class="section-title mb-30">
                 <h2> Kısayollar</h2>
             </div>
-            <div className="row p-2">
+            <div className="row p-2 mx-xs-0 w-xs-100">
                 {squareShortcutsHtml}
             </div>
         </div>

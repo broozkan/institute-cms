@@ -49,7 +49,7 @@ const EducateVideoPlaylistList = () => {
 
     return (
         <>
-                <PageTitle title={["Kullanıcı İşlemleri", "Eğitim Videoları"]} />
+                <PageTitle title={["Kullanıcı İşlemleri", "Belge-Döküman"]} />
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 offset-lg-2">

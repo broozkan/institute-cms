@@ -68,7 +68,6 @@ const CategoryDetail = (props) => {
 							<div class="col-lg-3 col-md-4 order-2">
 								<div class="side-bare mt-0">
 
-									<LastFivePost />
 									<RandomCategories />
 
 

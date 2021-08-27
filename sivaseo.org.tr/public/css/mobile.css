@@ -1,79 +1,87 @@
 /* For Mobile */
-@media screen and (max-width: 540px) {
 
+@media screen and (max-width: 540px) {
   /* SPACING UTILITIES */
-  .mt-xs-4{
+  .w-xs-100 {
+    width: 100%;
+  }
+  .d-xs-none{
+    display: none;
+  }
+  .mx-xs-0 {
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+  }
+  .w-xs-25 {
+    width: 25%!important;
+  }
+  .mt-xs-4 {
     margin-top: 1.5rem!important;
   }
-
-
+  .section-title {
+    padding-left: 1rem!important;
+    padding-right: 1rem!important;
+  }
+  /* youtube playlist */
+  .youtube-playlist-card {
+    display: inline-flex;
+  }
   /* card sentinel pharmacy */
-  .card-sentinel-pharmacy{
+  .card-sentinel-pharmacy {
     position: fixed;
     max-width: 85px;
     right: 2;
     top: 500px;
     z-index: 1;
-  
   }
-  .card-sentinel-pharmacy .card-body{
-
+  .card-sentinel-pharmacy .card-body {
     padding-right: 0px;
     padding-left: 0px;
     padding-top: 5px;
     padding-bottom: 5px;
   }
   /* card sentinel pharmacy */
-
-  #top-image{
+  #top-image {
     width: 100%;
   }
-
   /* some pads and margins for mobile */
-  .mb-xs-2{
+  .mb-xs-2 {
     margin-bottom: 2rem!important;
   }
-  .pr-xs-0{
+  .pr-xs-0 {
     padding-right: 0px!important;
   }
-
-  .pl-xs-0{
+  .pl-xs-0 {
     padding-left: 0px!important;
   }
-  .pr-xs-1{
+  .pr-xs-1 {
     padding-right: 1rem!important;
   }
-
-  .pl-xs-1{
+  .pl-xs-1 {
     padding-left: 1rem!important;
   }
   /* some pads and margins for mobile */
-
-
-  .container{
+  .container {
     width: 100%!important;
   }
-
   /* navbar */
-  .mobile-navbar{
+  .mobile-navbar {
     position: absolute;
     right: 0;
     width: 0;
   }
-  .navbar{
+  .navbar {
     padding-top: 0.7rem!important;
     padding-bottom: 0.5rem!important;
   }
-  .navbar .navbar-toggler{
+  .navbar .navbar-toggler {
     border: none;
   }
-  .navbar .form-inline{
+  .navbar .form-inline {
     order: 1;
     flex-flow: row;
   }
-  
-  
-  .mega-dropdown-menu{
+  .mega-dropdown-menu {
     overflow-y: scroll;
     height: 400px;
     overflow-x: hidden;
@@ -82,72 +90,81 @@
     position: absolute!important;
     padding: 10px;
   }
-  .mega-dropdown-menu .dropdown-item{
+  .mega-dropdown-menu .dropdown-item {
     text-align: left;
   }
-  .mega-dropdown-menu h6{
+  .mega-dropdown-menu h6 {
     text-align: left;
   }
   /* navbar */
-
-
   /* social media icons */
-  .social-media-icons-container-sidebar ul{
+  .social-media-icons-container-sidebar ul {
     display: inline-flex;
   }
-  .social-media-icons-container-sidebar .social-media-name{
+  .social-media-icons-container-sidebar .social-media-name {
     text-align: center;
   }
-  .social-media-icons-container li a{
+  .social-media-icons-container li a {
     font-size: 9px!important;
   }
+  .social-media-icons-container-sidebar {
+    padding: 10px;
+    text-align: center;
+  }
+  .social-media-icons-container-sidebar img {
+    width: 40%;
+  }
   /* social media icons */
-
-
   /* large photo */
-  .slider-area{
+  .slider-area {
     height: 500px;
     margin-top: 135px;
   }
-  .large-photo{
+  .slider-area img {
+    height: 40vh;
+  }
+  .large-photo {
     height: 450px;
   }
   /* large photo */
-
-
-
-  /* SLIDER */
-  .slider-overlay{
-    top: 610px;
+  /* shortcuts */
+  .square-shortcuts-section {
+    width: 100%;
   }
-
+  /* SLIDER */
+  .owl-carousel {
+    width: 100%;
+    overflow: hidden;
+    height: 70vh;
+  }
+  .slider-overlay {
+    top: 70vh;
+    height: 40vh;
+  }
   /* BLOG */
-  .post-detail{
+  .post-detail {
     width: 100vw;
     overflow: auto;
   }
-  .title-inner h1{
+  .title-inner h1 {
     font-size: 15px!important;
   }
-  ul.paging-title{
+  ul.paging-title {
     display: none;
   }
-  .page-title-area{
+  .page-title-area {
     padding: 45px 0!important;
   }
-  .list-inline{
+  .list-inline {
     display: inline-flex;
-    width: 75vw;
-    overflow: auto;  
+    width: 60vw;
+    overflow: auto;
   }
-  .list-inline .category-link{
+  .list-inline .category-link {
     display: inline-flex;
   }
-  .list-inline .category-link a{
+  .list-inline .category-link a {
     font-size: 10px;
     white-space: nowrap;
   }
-
-
-
 }

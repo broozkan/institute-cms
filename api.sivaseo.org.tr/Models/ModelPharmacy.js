@@ -6,6 +6,10 @@ const pharmacySchema = mongoose.Schema({
         type: String,
         required: true
     },
+    pharmacy_gln_number: {
+        type: Number,
+        required: true
+    },
     pharmacy_address: {
         type: String,
         required: true
@@ -21,7 +25,12 @@ const pharmacySchema = mongoose.Schema({
     pharmacy_phone_number: {
         type: String,
         required: true
+    },
+    pharmacy_location: {
+        type: String,
+        required: false
     }
+
 })
 
 pharmacySchema.plugin(aggregatePaginate);

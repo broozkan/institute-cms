@@ -18,7 +18,7 @@ export const SiteContextWrapper = (props) => {
         "Mayıs",
         "Haziran",
         "Temmuz",
-        "Ağustos",
+        "AĞUSTOS",
         "Eylül",
         "Ekim",
         "Kasım",

@@ -9,13 +9,14 @@ const CardPostSmall = (props) => {
     const postPublishDate = date.getDate() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" + date.getFullYear();
 
 
+
     return (
         <div className="single-blog hvr-grow">
             <div className="row">
                 <div className="col-lg-3 col-3 single-blog-image-container">
                     <div className="blog-img img-fluid">
                         <a href={`${siteUrls.POST_DETAIL_VIEW}/${props.post._id}/?t=${props.post.post_title}`}>
-                            <img src={process.env.REACT_APP_API_ENDPOINT + "/file/" + props.post.post_image} alt="" className="single-blog-img" />
+                            <img src={process.env.REACT_APP_API_ENDPOINT + "/file/" + props.post.post_categories[0].category_photo} alt="" className="single-blog-img" />
                         </a>
                     </div>
                 </div>

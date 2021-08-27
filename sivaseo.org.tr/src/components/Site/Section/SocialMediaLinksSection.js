@@ -14,11 +14,11 @@ const SocialMediaLinksSection = () => {
                 <li>
                     <div className="row">
                         <div className="col-lg-4 col-12">
-                            <a href="https://twitter.com/sivaseo" target="_blank"><img src={twitterLogo} className="img-fluid" /></a>
+                            <a href="https://twitter.com/sivaseczodasi" target="_blank"><img src={twitterLogo} className="img-fluid" /></a>
 
                         </div>
                         <div className="col-lg-8 col-12 social-media-name pt-2">
-                            <a href="https://twitter.com/sivaseo" target="_blank">sivaseo</a>
+                            <a href="https://twitter.com/sivaseczodasi" target="_blank">sivaseo</a>
 
                         </div>
                     </div>

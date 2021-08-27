@@ -61,8 +61,9 @@ const TableCloseExpirationMedicine = () => {
                 <tr>
                     <td className="close-expiration-medicine-image-cell"><img className="img img-fluid close-expiration-medicine-image" src={process.env.REACT_APP_API_ENDPOINT + '/file/' + item.close_expiration_image} /></td>
                     <td>{item.close_expiration_name}</td>
-                    <td>{item.close_expiration_piece + '+' + item.close_expiration_mf_piece}</td>
-                    <td>{item.close_expiration_piece}</td>
+                    <td>{item.close_expiration_price}</td>
+                    <td>{item.close_expiration_expiration_date}</td>
+                    <td>{item.close_expiration_stock_piece}</td>
                     <td>
                         <span className="fa fa-user mr-2"></span>
                         {item.close_expiration_user[0].user_name}
@@ -82,19 +83,23 @@ const TableCloseExpirationMedicine = () => {
 
     return (
         <>
-            <table className="table table-striped table-bordered">
-                <thead>
-                    <th>İlaç Görseli</th>
-                    <th>İlaç Adı</th>
-                    <th>Şart</th>
-                    <th>Adet</th>
-                    <th>Eczane</th>
-                    <th>#</th>
-                </thead>
-                <tbody>
-                    {tableCloseExpirationMedicineHtml}
-                </tbody>
-            </table>
+            <div className="table-responsive">
+                <table className="table table-striped table-bordered">
+                    <thead>
+                        <th>İlaç Görseli</th>
+                        <th>İlaç Adı</th>
+                        <th>Birim Fiyat</th>
+                        <th>Miad</th>
+                        <th>Adet</th>
+                        <th>Eczane</th>
+                        <th>#</th>
+                    </thead>
+                    <tbody>
+                        {tableCloseExpirationMedicineHtml}
+                    </tbody>
+                </table>
+            </div>
+
             <Pagination object={state.pagination_info} onClick={getCloseExpirations} />
 
         </>

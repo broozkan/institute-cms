@@ -11,8 +11,8 @@ const CardSentinelPharmacies = (props) => {
     return (
         <div className="card card-sentinel-pharmacy d-none" onClick={props.onClick}>
             <div className="card-body text-center">
-                <img src="https://2.bp.blogspot.com/-AAtRO7L0Dbk/VjEDPegTKrI/AAAAAAAAcZk/EitgzI6dGRc/s1600/eczane_e_logo_tabela.gif" className="w-75" alt="" />
-                <h5 className="d-sm-none">{siteContext.dayName} {siteContext.monthName} Nöbetçi Eczaneler</h5>
+                <img src={`${process.env.REACT_APP_API_ENDPOINT}/file/nobetci_eczane_logo.gif`} className="w-75" alt="" />
+                <h5 className="d-sm-none">{siteContext.dayName} {siteContext.monthName} NÖBETÇİ <span style={{ fontSize: '10px' }}>ECZANELER</span> </h5>
             </div>
         </div>
     )

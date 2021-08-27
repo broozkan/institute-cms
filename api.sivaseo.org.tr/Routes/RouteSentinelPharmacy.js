@@ -81,11 +81,11 @@ router.post('/save-sentinel-pharmacies', (req, res) => {
         sentinelPharmaciesData.on("end", function () {
             var body = JSON.parse(Buffer.concat(chunks).toString());
 
-
             body.result.forEach(async (element) => {
 
                 const sentinelPharmacy = new SentinelPharmacy(
                     element.name,
+                    111111111111111,
                     element.address,
                     "SİVAS",
                     element.dist,

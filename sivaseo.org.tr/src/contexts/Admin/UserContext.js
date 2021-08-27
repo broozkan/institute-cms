@@ -10,11 +10,16 @@ export const UserContextWrapper = (props) => {
         const token = localStorage.getItem('auth-token')
         const user = JSON.parse(localStorage.getItem('user'))
 
-        if (user.is_user_admin) {
-            return true
+        if (user) {
+            if (user.is_user_admin) {
+                return true
+            } else {
+             //   window.location.href = '/admin/login/'
+            }
         } else {
-            window.location.href = '/admin/login/'
+          //  window.location.href = '/admin/login/'
         }
+
     }
 
 

@@ -84,12 +84,16 @@ const ModalSentinelPharmacies = () => {
                 </Modal.Header>
                 <Modal.Body>
                     <div className="row pb-3">
+                    <div className="col-lg-12">
+                            <a className="btn btn-lg btn-info print-sentinel-pharmacies w-100" href="https://www.sivaseo.org.tr/nobetdemo/tumlistenp.php" target="_blank"><span className="fa fa-list"></span> Tüm Nöbet Listesi</a>
+                        </div>
                         <div className="col-lg-12">
                             <form action="http://sivaseo.org.tr/nobetdemo/nobetyarinyeni.php" method="POST" target="_blank">
                                 <input name="task" type="date" className="d-none" value={dateString} />
-                                <button className="btn btn-lg btn-danger print-sentinel-pharmacies w-100"><span className="fa fa-print"></span> Yazdır</button>
+                                <button className="btn btn-lg btn-danger print-sentinel-pharmacies w-100  mt-3"><span className="fa fa-print"></span> Yazdır</button>
                             </form>
                         </div>
+                      
                     </div>
                     <div className="row" id="print-content">
                         {sentinelPharmaciesHtml}
@@ -98,7 +102,7 @@ const ModalSentinelPharmacies = () => {
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose} >
                         Kapat
-                        </Button>
+                    </Button>
                 </Modal.Footer>
             </Modal>
 

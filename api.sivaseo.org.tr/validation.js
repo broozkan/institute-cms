@@ -1,18 +1,6 @@
 const Joi = require('joi')
 
 
-// user validation
-const userValidation = Joi.object({
-    user_name : Joi.string().required(),
-    user_username : Joi.string().required(),
-    user_password : Joi.string().min(6).required(),
-    user_password_repeat : Joi.string().required().valid(Joi.ref('user_password')),
-    user_email : Joi.string().email().allow(''),
-    user_pharmacy: Joi.any(),
-    user_permissions : Joi.any().required()
-}).unknown(true)
-
-
 // permission validation
 const permissionValidation = Joi.object({
     permission_verbose_name : Joi.string().required(),
@@ -142,7 +130,6 @@ module.exports.sliderValidation = sliderValidation
 module.exports.shortcutValidation = shortcutValidation
 module.exports.postValidation = postValidation
 module.exports.postStateValidation = postStateValidation
-module.exports.userValidation = userValidation
 module.exports.permissionValidation = permissionValidation
 module.exports.pharmacyValidation = pharmacyValidation
 module.exports.categoryValidation = categoryValidation

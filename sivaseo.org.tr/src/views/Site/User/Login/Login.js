@@ -1,8 +1,14 @@
 import React from 'react'
 import FormLogin from '../../../../components/Site/Form/FormLogin'
 import PageTitle from '../../../../components/Site/PageTitle/PageTitle'
+import queryString from 'query-string'
 
-const Login = () => {
+const Login = (props) => {
+
+    const urlParams = queryString.parse(props.location.search);
+
+
+
 
     return (
         <>
@@ -12,7 +18,7 @@ const Login = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-4 col-md-4 offset-lg-2 offset-md-2">
-                            <FormLogin />
+                            <FormLogin re={urlParams.re} />
                         </div>
                     </div>
                 </div>

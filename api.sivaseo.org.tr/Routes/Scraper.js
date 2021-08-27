@@ -25,29 +25,35 @@ const scrap = (url, element) => {
 
 const getLastTebPost = async () => {
 
-    // get last post from teb.org.tr
-    let scrappedWebContent = await scrap('https://www.teb.org.tr/news?news_group=0&firstDate=&endDate=&title=', 'h1')
-    const postLink = scrappedWebContent["0"].children["1"].parent.parent.attribs.href
-    const postTitle = scrappedWebContent["0"].children["1"].data
+    try {
+        // get last post from teb.org.tr
+        let scrappedWebContent = await scrap('https://www.teb.org.tr/news?news_group=0&firstDate=&endDate=&title=', 'h1')
+
+        const postLink = scrappedWebContent["0"].children["1"].parent.parent.attribs.href
+        const postTitle = scrappedWebContent["0"].children["1"].data
 
 
-    // get content of post
-    scrappedWebContent = await scrap(postLink, '.haberPage_M')
-    const postContent = scrappedWebContent.html()
+        // get content of post
+        scrappedWebContent = await scrap(postLink, '.haberPage_M')
+        const postContent = scrappedWebContent.html()
 
 
-    return ({
-        post_link: postLink,
-        post_title: postTitle,
-        post_content: postContent
-    })
+        return ({
+            post_link: postLink,
+            post_title: postTitle,
+            post_content: postContent
+        })
+    } catch (err) {
+        // handle the error
+        console.log('error: ', err);
+    }
+
 }
 
 
 router.get('/', async (req, res) => {
     const response = await getLastTebPost()
-    const tebCategory = await Category.categoryModel.findOne({ category_name: "TEB" }, (err, data) => {
-
+    let tebCategory = await Category.categoryModel.findOne({ category_name: "TEB" }, (err, data) => {
     })
 
 
@@ -60,11 +66,14 @@ router.get('/', async (req, res) => {
         return false
     } else {
         // save the post
+        console.log(tebCategory);
+        tebCategory.category_photo = "teb-duyuru.jpg"
+        console.log(tebCategory);
 
         const newPost = new Post.postModel({
             post_title: response.post_title,
             post_alternative_title: response.post_title,
-            post_image: "teb_logo.jpg",
+            post_image: "teb-duyuru.jpg",
             post_content: response.post_content,
             is_post_shown_on_slider: false,
             is_post_open_for_comment: false,

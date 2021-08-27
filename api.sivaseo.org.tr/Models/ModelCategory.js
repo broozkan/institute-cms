@@ -7,6 +7,10 @@ const categorySchema = mongoose.Schema({
         type: String,
         required: true
     },
+    category_photo: {
+        type: String,
+        required: false
+    },
     is_category_main: {
         type: Boolean,
         required: true

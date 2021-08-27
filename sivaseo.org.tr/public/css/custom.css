@@ -277,6 +277,14 @@ input[type="radio"], input[type="checkbox"] {
   margin-top: 0px;
 }
 
+.owl-prev {
+  display: none;
+}
+
+.owl-next {
+  display: none;
+}
+
 .li-after li {
   position: relative;
 }
@@ -311,6 +319,10 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 /* page body */
+
+#page-content {
+  overflow: hidden;
+}
 
 .page-body {}
 
@@ -458,6 +470,17 @@ form .form-group {
   list-style: disc;
 }
 
+.post-content a {
+  border: 1px solid lightgray;
+  padding: 0.5em;
+  line-height: 2em;
+}
+
+.post-content a:hover {
+  color: white;
+  background: #c21a26;
+}
+
 /* post detail */
 
 /* slider */
@@ -557,6 +580,11 @@ form .form-group {
   border-radius: 50%;
   background: transparent;
   border: none;
+}
+
+.card-sentinel-pharmacy h5 {
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
 .print-sentinel-pharmacies {
@@ -894,18 +922,18 @@ table {
   height: 855px;
   margin-top: 210px;
 }
-.sub-slider{
+
+.sub-slider {
   display: flex;
   justify-content: space-between;
   padding: 0px 30px 50px;
 }
+
 .sub-slider img:not(.active) {
   filter: grayscale(1);
 }
 
-.large-photo {
-  height: 900px;
-}
+.large-photo {}
 
 .large-photo-overlay {
   width: 100%;
@@ -932,6 +960,10 @@ table {
   background: rgb(211 211 211 / 11%) !important;
 }
 
+.footer-box img {
+  width: 50%;
+}
+
 /* ADMIN */
 
 .categories {
@@ -951,4 +983,19 @@ table {
     width: 100%;
     display: block;
   }
+}
+
+/* ADMIN */
+
+#sidebar-wrapper {
+  background: #28292b!important;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  color: white;
+}
+
+#sidebar-wrapper .list-group-flush .list-group-item {
+  background: #28292b!important;
+  color: white;
 }

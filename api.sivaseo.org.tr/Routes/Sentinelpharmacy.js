@@ -51,7 +51,6 @@ router.get('/save-sentinel-pharmacies', (req, res) => {
 
         sentinelPharmaciesData.on("end",  function () {
             var body = JSON.parse(Buffer.concat(chunks).toString());
-            
             body.result.map(async (item) => {
                 const savedSentinelPharmacy = await newSentinelPharmacy(item)
                 savedPharmacies.push(item)

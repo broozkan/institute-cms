@@ -137,7 +137,6 @@ const PostDetail = (props) => {
 							<div className="col-lg-3 col-md-4 order-md-1 order-2">
 								<div className="side-bare mt-0">
 
-									<LastFivePost />
 
 									<div className="side-widget fix">
 										<div className="section-title mb-30">

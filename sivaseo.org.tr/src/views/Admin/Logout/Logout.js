@@ -4,7 +4,7 @@ import React, { useContext, useEffect } from 'react'
 const Logout = () => {
 
     useEffect(()=>{
-        localStorage.removeItem('auth-token')
+        localStorage.clear()
     },[])
 
     return (

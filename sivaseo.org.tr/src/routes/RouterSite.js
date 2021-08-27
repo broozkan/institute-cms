@@ -52,7 +52,7 @@ const Routes = () => {
                     <div id="page-content" className="page-wrapper">
                         <Switch>
                             <Route path={`${siteUrls.HOME_VIEW}`} exact component={HomePage}></Route>
-                            <Route path={`${siteUrls.USER_LOGIN_VIEW}`} exact component={Login}></Route>
+                            <Route path={`${siteUrls.USER_LOGIN_VIEW}/:redirectUrl?`} exact component={Login}></Route>
 
                             <Route path={`${siteUrls.USER_LOGOUT_VIEW}`} exact component={Logout}></Route>
 

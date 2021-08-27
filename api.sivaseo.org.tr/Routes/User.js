@@ -5,6 +5,7 @@ const { userValidation } = require('../validation')
 const jwt = require('jsonwebtoken')
 const Pharmacy = require('../Models/ModelPharmacy')
 const Controller = require('../Controllers/Controller')
+const mongoose = require('mongoose')
 
 // get user list
 router.get('/:page', async (req, res) => {
@@ -56,12 +57,12 @@ router.post('/login', async (req, res) => {
 
 
     var auth = Buffer.from(authHeader.split(' ')[1], 'base64').toString().split(':')
-    const username = auth[0]
+    const usergln = auth[0]
     const password = auth[1]
 
 
     const filters = {
-        user_username: username,
+        'user_pharmacy.pharmacy_gln_number': usergln,
         user_password: password
     }
 
@@ -76,6 +77,7 @@ router.post('/login', async (req, res) => {
             if (user.length > 0) {
                 // success authentication
                 // create token
+                console.log(user);
                 const token = jwt.sign({ userData: user }, process.env.TOKEN_SECRET)
                 res.header('auth-token', token)
 
@@ -103,38 +105,8 @@ router.post('/login', async (req, res) => {
 // new user
 router.post('/register', async (req, res) => {
 
-    req.body = req.body.formData
+    console.log(req.body);
 
-
-    // joi validation
-    const validation = userValidation.validate(req.body)
-    if (validation.error) {
-        res.send({
-            response: false,
-            responseData: validation.error.details[0]["message"]
-        })
-        return false
-    }
-
-
-
-    // check username exist
-    let usernameExist;
-    await User.userModel.findOne({ user_username: req.body.user_username }, (err, result) => {
-        if (result == null) {
-            usernameExist = null
-        } else {
-            usernameExist = result
-        }
-    })
-
-    if (usernameExist != null) {
-        res.send({
-            response: false,
-            responseData: "Kullanıcı adı başka bir kullanıcı tarafından kullanılmaktadır!"
-        })
-        return false
-    }
 
     //check email exist
     let emailExist;
@@ -154,19 +126,10 @@ router.post('/register', async (req, res) => {
         return false
     }
 
-    // get pharmacy informations
-    let pharmacyInformations = ''
-    await Pharmacy.pharmacyModel.findById(req.body.user_pharmacy_id, (err, result) => {
-        if (result != null) {
-            pharmacyInformations = result
-        }
-    })
-    req.body.user_pharmacy = pharmacyInformations
 
     // new user
     const newUser = new User.userModel({
         user_name: req.body.user_name,
-        user_username: req.body.user_username,
         user_password: req.body.user_password,
         user_email: req.body.user_email,
         user_pharmacy: req.body.user_pharmacy,
@@ -193,40 +156,9 @@ router.post('/register', async (req, res) => {
 // new user end
 
 // update user
-router.put('/update/:userId', async (req, res) => {
+router.put('/:userId', async (req, res) => {
 
 
-    req.body = req.body.formData
-
-
-    // joi validation
-    const validation = userValidation.validate(req.body)
-    if (validation.error) {
-        res.send({
-            response: false,
-            responseData: validation.error.details[0]["message"]
-        })
-        return false
-    }
-
-
-    // check username exist
-    let usernameExist;
-    await User.userModel.findOne({ user_username: req.body.user_username, _id: { $ne: req.params.userId } }, (err, result) => {
-        if (result == null) {
-            usernameExist = null
-        } else {
-            usernameExist = result
-        }
-    })
-
-    if (usernameExist != null) {
-        res.send({
-            response: false,
-            responseData: "Kullanıcı adı başka bir kullanıcı tarafından kullanılmaktadır!"
-        })
-        return false
-    }
 
     //check email exist
     let emailExist;
@@ -246,22 +178,13 @@ router.put('/update/:userId', async (req, res) => {
         return false
     }
 
-    // get pharmacy informations
-    let pharmacyInformations = ''
-    await Pharmacy.pharmacyModel.findById(req.body.user_pharmacy_id, (err, result) => {
-        if (result != null) {
-            pharmacyInformations = result
-        }
-    })
-    console.log(pharmacyInformations);
-    req.body.user_pharmacy = pharmacyInformations
+
 
     // update user
     await User.userModel.findByIdAndUpdate(
         { _id: req.params.userId },
         {
             user_name: req.body.user_name,
-            user_username: req.body.user_username,
             user_password: req.body.user_password,
             user_email: req.body.user_email,
             user_pharmacy: req.body.user_pharmacy,
@@ -289,7 +212,7 @@ router.put('/update/:userId', async (req, res) => {
 
 
 // delete user
-router.delete('/delete/:userId', async (req, res) => {
+router.delete('/:userId', async (req, res) => {
     await User.userModel.deleteOne({ _id: req.params.userId }, (err) => {
         if (err) {
             res.send({

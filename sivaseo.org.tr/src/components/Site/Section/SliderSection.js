@@ -32,9 +32,9 @@ const SliderSection = () => {
                 item.is_active = "active"
             }
 
-            subSliderItemsJsx.push(
+            /*subSliderItemsJsx.push(
                 <img width="75" className={item.is_active} src={`${process.env.REACT_APP_API_ENDPOINT}/file/${state.sliderItems[index].post_image}`} />
-            )
+            )*/
             return (
                 <SliderItem props={item} />
             )
@@ -46,7 +46,7 @@ const SliderSection = () => {
 
     return (
 
-        <div className="slider-container container">
+        <div className="slider-container container mt-5">
             <div className="col-lg-12">
                 <div className="section-title2 text-center">
                     <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">

@@ -40,7 +40,7 @@ class FormUser extends Component {
 
         const user = await api.get('/users/1', { params: { '_id': this.props.user_id }, headers: { 'auth-token': localStorage.getItem('auth-token') } })
 
-
+        console.log(user);
         this.setState({
             user_name: user.data.docs[0].user_name,
             user: user.data.docs[0].user,
@@ -94,7 +94,7 @@ class FormUser extends Component {
         if (this.props.user_id) {
             submitResponse = await api.put(process.env.REACT_APP_API_ENDPOINT + '/users/' + this.props.user_id, this.state, { headers: { 'auth-token': localStorage.getItem('auth-token') } })
         } else {
-            submitResponse = await api.post(process.env.REACT_APP_API_ENDPOINT + '/users', this.state, { headers: { 'auth-token': localStorage.getItem('auth-token') } })
+            submitResponse = await api.post(process.env.REACT_APP_API_ENDPOINT + '/users/register', this.state, { headers: { 'auth-token': localStorage.getItem('auth-token') } })
         }
 
         if (submitResponse.data.response) {

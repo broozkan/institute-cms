@@ -4,7 +4,7 @@ import { adminUrls } from '../../../lib/Admin/adminUrls'
 
 const Sidebar = () => {
     return (
-        <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="bg-darkgray border-right" id="sidebar-wrapper" >
             <div class="sidebar-heading">37. Bölge Sivas Eczacılar Odası Yönetim Paneli </div>
             <div class="list-group list-group-flush">
                 <a href="#" class="list-group-item list-group-item-action bg-light"><span className="fa fa-cog"></span> Yönetim</a>

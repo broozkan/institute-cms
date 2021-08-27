@@ -15,6 +15,7 @@ class FormCategory extends Component {
             is_category_main: true,
             category_type: "",
             category_order_number: "",
+            category_post_id: '',
             categories: [],
             posts: [],
             is_posts_loaded: false,
@@ -72,7 +73,7 @@ class FormCategory extends Component {
 
     getPosts = async () => {
 
-        const posts = await api.get('/post/list/1', { headers: { 'auth-token': localStorage.getItem('auth-token') } })
+        const posts = await api.get('/posts/1', { headers: { 'auth-token': localStorage.getItem('auth-token') } })
 
         this.setState({
             posts: posts.data.docs,
@@ -208,7 +209,7 @@ class FormCategory extends Component {
         }
 
 
-
+        console.log(this.state);
 
         return (
             <form className="" onSubmit={this.handleSubmit}>

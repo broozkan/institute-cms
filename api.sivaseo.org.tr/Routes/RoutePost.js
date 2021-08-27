@@ -24,7 +24,7 @@ router.get('/:page', async (req, res) => {
                 $match: req.query,
             },
             {
-                $sort: { post_order_number: 1 }
+                $sort: { post_publish_date: -1 }
             }
         ]
 
@@ -36,9 +36,8 @@ router.get('/:page', async (req, res) => {
             req.query["_id"] = mongoose.Types.ObjectId(req.query["_id"])
         }
 
-
         if (req.query["is_post_shown_on_slider"]) {
-            req.query["is_post_shown_on_slider"] = req.query["is_post_shown_on_slider"] == true
+            req.query["is_post_shown_on_slider"] = req.query["is_post_shown_on_slider"] == 'true'
         }
 
         if (req.query.search) {
@@ -49,17 +48,18 @@ router.get('/:page', async (req, res) => {
                     }
                 },
                 {
-                    $sort: { post_order_number: 1 }
+                    $sort: { post_publish_date: -1 }
                 }
             ]
         }
 
     }
+    console.log(pipeline);
     const aggregate = PostModel.postModel.aggregate(pipeline)
 
     const options = {
         page: req.params.page,
-        limit: 10
+        limit: 50
     }
 
     PostModel.postModel.aggregatePaginate(aggregate, options, (err, result) => {

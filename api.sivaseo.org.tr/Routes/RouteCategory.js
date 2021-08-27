@@ -66,7 +66,7 @@ router.post('/', async (req, res) => {
         req.body.category_name,
         req.body.is_category_main,
         req.body.category_upper_category_id,
-        req.body.category_category_id,
+        req.body.category_post_id,
         req.body.category_type,
         req.body.category_external_url,
         req.body.category_order_number

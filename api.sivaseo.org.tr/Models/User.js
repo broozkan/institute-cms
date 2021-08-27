@@ -9,10 +9,6 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    user_username: {
-        type: String,
-        required: true
-    },
     user_password: {
         type: String,
         required: true
@@ -27,7 +23,10 @@ const userSchema = mongoose.Schema({
         required: false,
         default: '/user/dashboard'
     },
-    user_permissions: [Permission.permissionSchema],
+    user_permissions: {
+        type: Array,
+        required: false
+    },
 })
 
 userSchema.plugin(aggregatePaginate);
